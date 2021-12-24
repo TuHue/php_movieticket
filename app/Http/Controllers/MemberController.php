@@ -8,11 +8,11 @@ class MemberController extends Controller
 {
     public function getLogin()
     {
-        return view('pages.menbers.login');
+        return view('pages.member.login');
     }
 
     public function getRegister()
     {
-        return view('pages.menbers.register');
+        return view('pages.member.register');
     }
 }

@@ -3,7 +3,7 @@
 @section('content')
 
     <!-- ==========Banner-Section========== -->
-    <section class="details-banner hero-area bg_img seat-plan-banner" data-background="./assets/images/banner/banner04.jpg">
+    <section class="details-banner hero-area bg_img seat-plan-banner" data-background="{{URL::asset('assets/images/payment/card.png')}}">
         <div class="container">
             <div class="details-banner-wrapper">
                 <div class="details-banner-content style-two">
@@ -51,7 +51,7 @@
             <div class="screen-area">
                 <h4 class="screen">screen</h4>
                 <div class="screen-thumb">
-                    <img src="./assets/images/movie/screen-thumb.png" alt="movie">
+                    <img src="{{URL::asset('assets/images/payment/card.png')}}" alt="movie">
                 </div>
                 <h5 class="subtitle">silver plus</h5>
                 <div class="screen-wrapper">
@@ -62,16 +62,16 @@
                                 <li class="front-seat">
                                     <ul>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                     </ul>
                                 </li>

@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class LoaiPhim extends Model
 {
-    use HasFactory;
+    protected $table = 'loai_phim';
+    protected $primaryKey = 'loai_phim_id';
+    protected $guarded = [];
+    protected $perPage = 5;
+
+    
 }

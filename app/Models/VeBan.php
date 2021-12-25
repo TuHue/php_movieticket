@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class VeBan extends Model
 {
-    use HasFactory;
+    protected $table = 've_ban';
+    protected $primaryKey = 've_ban_id';
+    protected $guarded = [];
+    protected $perPage = 5;
 }

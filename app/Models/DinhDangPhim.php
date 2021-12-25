@@ -11,4 +11,8 @@ class DinhDangPhim extends Model
     protected $primaryKey = 'dinh_dang_phim_id';
     protected $guarded = [];
     protected $perPage = 5;
+
+    public function suatChieu(){
+        return $this->hasMany(SuatChieu::class,'id_suat_chieu','suat_chieu_id');
+    }
 }

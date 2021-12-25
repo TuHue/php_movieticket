@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS `ve_dat`;
 
 CREATE TABLE IF NOT EXISTS `ve_dat`(
     `ve_dat_id` INT AUTO_INCREMENT,
-    `id_khach_hang` INT UNSIGNED NOT NULL,
+    `id_nguoi_dung` INT UNSIGNED NOT NULL,
     `id_ve_ban` INT UNSIGNED NOT NULL,
     PRIMARY KEY (`ve_dat_id`)
 ) ENGINE InnoDB;
@@ -35,7 +35,8 @@ CREATE TABLE IF NOT EXISTS `ve_ban`(
     `ve_ban_id` INT AUTO_INCREMENT,
     `id_phim` INT UNSIGNED NOT NULL,
     `id_phong_chieu` INT UNSIGNED NOT NULL,
-    `id_ghe` INT UNSIGNED NOT NULL,
+    `id_ghe_ngoi` INT UNSIGNED NOT NULL,
+    `id_suat_chieu` INT UNSIGNED NOT NULL,
     `ngay_ban` DATETIME NOT NULL,
     `tong_tien` INT(16) UNSIGNED NOT NULL,
     PRIMARY KEY (`ve_ban_id`)

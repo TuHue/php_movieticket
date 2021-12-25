@@ -21,4 +21,8 @@ class Phim extends Model
     {
         return $this->hasMany(SuatChieu::class, 'id_suat_chieu', 'suat_chieu_id');
     }
+    public function veBan()
+    {
+        return $this->hasMany(VeBan::class, 'id_ve_ban', 've_ban_id');
+    }
 }

@@ -11,4 +11,9 @@ class NguoiDung extends Model
     protected $primaryKey = 'nguoi_dung_id';
     protected $guarded = [];
     protected $perPage = 5;
+
+    public function veDat()
+    {
+        return $this->hasMany(VeDat::class, 'id_ve_dat', 've_dat_id');
+    }
 }

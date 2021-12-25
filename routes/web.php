@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\HTTP\Controllers\MemberController;
 use App\HTTP\Controllers\PageController;
 use App\HTTP\Controllers\MovieController;
-
+use App\HTTP\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,4 +51,17 @@ Route::group(['prefix' => ''], function () {
         Route::get('', [MemberController::class, 'getRegister']);
         Route::post('', [MemberController::class, 'getRegister']);
     });
+});
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('dashboard', [AdminController::class, 'index'])->name('dashboard');
+    Route::group(['prefix' => 'login'], function () {
+        Route::get('', [AdminController::class, 'getLogin']);
+        Route::post('', [AdminController::class, 'getLogin']);
+    });
+    Route::group(['prefix' => 'movie'], function () {
+        Route::get('', [AdminController::class, 'getMovie']);
+        Route::post('', [AdminController::class, 'getMovie']);
+    });
+   
 });

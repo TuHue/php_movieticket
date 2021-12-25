@@ -10,7 +10,7 @@ class AdminController extends Controller
     {
         return view('admin.dashboard');
     }
-    public function movie()
+    public function getMovie()
     {
         return view('admin.movie.index');
     }

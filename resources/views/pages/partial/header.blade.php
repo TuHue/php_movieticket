@@ -3,7 +3,7 @@
         <div class="header-wrapper">
             <div class="logo">
                 <a href="/movie">
-                    <img src="./assets/images/favicon.png" alt="logo">
+                    <img src="{{URL::asset('assets/images/favicon.png')}}" alt="logo">
                 </a>
             </div>
             <ul class="menu">

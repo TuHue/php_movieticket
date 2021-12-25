@@ -20,45 +20,6 @@ use App\HTTP\Controllers\AdminController;
 Route::group(['prefix' => ''], function () {
     Route::get('about', [PageController::class, 'about'])->name('about');
     Route::get('contact', [PageController::class, 'contact'])->name('contact');
-    Route::get('', function () { return redirect("/movie"); })->name('');
-    Route::group(['prefix' => 'movie'], function () {
-        Route::get('', [MovieController::class, 'index'])->name('movie');
-        Route::post('', [MovieController::class, 'index']);
-
-        // Route::group(['namespace' => 'step-1'], function () {
-        //     Route::get('/', [MovieController::class, 'getStep1']);
-        //     Route::post('/', [MovieController::class, 'getStep1']);
-        // });
-        // Route::group(['prefix' => 'step-2'], function () {
-        //     Route::get('', [MovieController::class, 'getStep2']);
-        //     Route::post('', [MovieController::class, 'getStep2']);
-        // });
-        // Route::group(['prefix' => 'step-3'], function () {
-        //     Route::get('', [MovieController::class, 'getStep3']);
-        //     Route::post('', [MovieController::class, 'getStep3']);
-        // });
-        // Route::group(['prefix' => 'step-4'], function () {
-        //     Route::get('', [MovieController::class, 'getStep4']);
-        //     Route::post('', [MovieController::class, 'getStep4']);
-        // });
-    });
-
-    Route::group(['prefix' => 'step-1'], function () {
-        Route::get('', [MovieController::class, 'getStep1']);
-        Route::post('', [MovieController::class, 'postStep1']);
-    });
-    Route::group(['prefix' => 'step-2'], function () {
-        Route::get('', [MovieController::class, 'getStep2']);
-        Route::post('', [MovieController::class, 'postStep2']);
-    });
-    Route::group(['prefix' => 'step-3'], function () {
-        Route::get('', [MovieController::class, 'getStep3']);
-        Route::post('', [MovieController::class, 'postStep4']);
-    });
-    Route::group(['prefix' => 'step-4'], function () {
-        Route::get('', [MovieController::class, 'getStep4']);
-        Route::post('', [MovieController::class, 'postStep4']);
-    });
 
     Route::group(['prefix' => 'login'], function () {
         Route::get('', [MemberController::class, 'getLogin']);
@@ -68,6 +29,30 @@ Route::group(['prefix' => ''], function () {
         Route::get('', [MemberController::class, 'getRegister']);
         Route::post('', [MemberController::class, 'getRegister']);
     });
+    Route::get('', function () { return redirect(   "/movie"); })->name('');
+
+    Route::group(['prefix' => 'movie'], function () {
+        Route::get('', [MovieController::class, 'index']);
+        Route::post('', [MovieController::class, 'index']);
+
+        Route::group(['prefix' => 'step-1'], function () {
+            Route::get('', [MovieController::class, 'getStep1']);
+            Route::post('', [MovieController::class, 'getStep1']);
+        });
+        Route::group(['name' => 'step-2','prefix' => 'step-2'], function () {
+            Route::get('', [MovieController::class, 'getStep2']);
+            Route::post('', [MovieController::class, 'getStep2']);
+        });
+        Route::group(['prefix' => 'step-3'], function () {
+            Route::get('', [MovieController::class, 'getStep3']);
+            Route::post('', [MovieController::class, 'getStep3']);
+        });
+        Route::group(['prefix' => 'step-4'], function () {
+            Route::get('', [MovieController::class, 'getStep4']);
+            Route::post('', [MovieController::class, 'getStep4']);
+        });
+    });
+
 });
 
 Route::group(['prefix' => 'admin'], function () {

@@ -2,7 +2,7 @@
 @section('title','Check Out ')
 @section('content')
  <!-- ==========Banner-Section========== -->
- <section class="details-banner hero-area bg_img seat-plan-banner" data-background="./assets/images/banner/banner04.jpg">
+ <section class="details-banner hero-area bg_img seat-plan-banner" data-background="{{ URL::asset('/assets/images/banner/banner04.jpg') }}">
     <div class="container">
         <div class="details-banner-wrapper">
             <div class="details-banner-content style-two">
@@ -91,19 +91,19 @@
                     <ul class="payment-option">
                         <li class="active">
                             <a href="#0">
-                                <img src="./assets/images/payment/card.png" alt="payment">
+                                <img src="{{URL::asset('assets/images/payment/card.png')}}" alt="payment">
                                 <span>Credit Card</span>
                             </a>
                         </li>
                         <li>
                             <a href="#0">
-                                <img src="./assets/images/payment/card.png" alt="payment">
+                                <img src="{{URL::asset('assets/images/payment/card.png')}}" alt="payment">
                                 <span>Debit Card</span>
                             </a>
                         </li>
                         <li>
                             <a href="#0">
-                                <img src="./assets/images/payment/paypal.png" alt="payment">
+                                <img src="{{URL::asset('assets/images/payment/paypal.png')}}" alt="payment">
                                 <span>paypal</span>
                             </a>
                         </li>

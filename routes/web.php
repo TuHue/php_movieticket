@@ -67,12 +67,12 @@ Route::group(['prefix' => 'admin'], function () {
 
         Route::group(['prefix' => 'add'], function () {
             Route::get('', [AdminController::class, 'getAdd']);
-            Route::post('', [AdminController::class, 'getAdd']);
+            Route::post('', [AdminController::class, 'postAdd']);
         });
 
         Route::group(['prefix' => 'update'], function () {
-            Route::get('', [AdminController::class, 'getUpdate']);
-            Route::post('', [AdminController::class, 'getUpdate']);
+            Route::get('/{id}', [AdminController::class, 'getUpdate']);
+            Route::post('/{id}', [AdminController::class, 'postUpdate']);
         });
 
        Route::get('delete/{id}',[AdminController::class,'deleteMovie']);

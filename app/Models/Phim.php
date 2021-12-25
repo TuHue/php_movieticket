@@ -12,10 +12,11 @@ class Phim extends Model
     protected $guarded = [];
     protected $perPage = 5;
     public $incrementing = false;
+    public $timestamps = false;
 
     public function loaiPhim()
     {
-        return $this->hasOne(Phim::class, 'id_loai_phim', 'loai_phim_id');
+        return $this->belongsTo(LoaiPhim::class);
     }
 
     public function suatChieu()

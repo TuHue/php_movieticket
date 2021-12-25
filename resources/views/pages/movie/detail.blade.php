@@ -1,168 +1,214 @@
 @extends('pages.layout.master')
-@section('title','Detail ')
+@section('title','Movie ')
 @section('content')
-
 <!-- ==========Banner-Section========== -->
-<section class="details-banner bg_img" data-background="./assets/images/banner/banner03.jpg">
+<section class="banner-section">
+    <div class="banner-bg bg_img bg-fixed" data-background="{{ URL::asset('assets/images/banner/banner02.jpg') }}"></div>
     <div class="container">
-        <div class="details-banner-wrapper">
-            <div class="details-banner-thumb">
-                <img src="./assets/images/movie/venus.jpg" alt="movie">
-                <a href="https://www.youtube.com/embed/KGeBMAgc46E" class="video-popup">
-                    <img src="./assets/images/movie/video-button.png" alt="movie">
-                </a>
-            </div>
-            <div class="details-banner-content offset-lg-3">
-                <h3 class="title">Venus</h3>
-                <div class="tags">
-                    <a href="#0">English</a>
-                    <a href="#0">Hindi</a>
-                    <a href="#0">Telegu</a>
-                    <a href="#0">Tamil</a>
-                </div>
-                <a href="#0" class="button">horror</a>
-                <div class="social-and-duration">
-                    <div class="duration-area">
-                        <div class="item">
-                            <i class="fas fa-calendar-alt"></i><span>06 Dec, 2020</span>
-                        </div>
-                        <div class="item">
-                            <i class="far fa-clock"></i><span>2 hrs 50 mins</span>
-                        </div>
+        <div class="banner-content">
+            <h1 class="title bold">get <span class="color-theme">movie</span> tickets</h1>
+            <p>Buy movie tickets in advance, find movie times watch trailer, read movie reviews and much more</p>
+        </div>
+    </div>
+</section>
+<!-- ==========Banner-Section========== -->
+
+<!-- ==========Ticket-Search========== -->
+<section class="search-ticket-section padding-top pt-lg-0">
+    <div class="container">
+        <div class="search-tab bg_img" data-background="./assets/images/ticket/ticket-bg01.jpg">
+            <div class="row align-items-center mb--20">
+                <div class="col-lg-6 mb-20">
+                    <div class="search-ticket-header">
+                        <h6 class="category">welcome to Boleto </h6>
+                        <h3 class="title">what are you looking for</h3>
                     </div>
-                    <ul class="social-share">
-                        <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#0"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#0"><i class="fab fa-pinterest-p"></i></a></li>
-                        <li><a href="#0"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#0"><i class="fab fa-google-plus-g"></i></a></li>
+                </div>
+                <div class="col-lg-6 mb-20">
+                    <ul class="tab-menu ticket-tab-menu">
+                        <li class="active">
+                            <div class="tab-thumb">
+                                <img src="./assets/images/ticket/ticket-tab01.png" alt="ticket">
+                            </div>
+                            <span>movie</span>
+                        </li>
+                        <li>
+                            <div class="tab-thumb">
+                                <img src="./assets/images/ticket/ticket-tab02.png" alt="ticket">
+                            </div>
+                            <span>events</span>
+                        </li>
+                        <li>
+                            <div class="tab-thumb">
+                                <img src="./assets/images/ticket/ticket-tab03.png" alt="ticket">
+                            </div>
+                            <span>sports</span>
+                        </li>
                     </ul>
                 </div>
             </div>
-        </div>
-
-    </div>
-</section>
-<!-- ==========Banner-Section========== -->
-
-<!-- ==========Book-Section========== -->
-<section class="book-section bg-one">
-    <div class="container">
-        <div class="book-wrapper offset-lg-3">
-            <div class="left-side">
-                <div class="item">
-                    <div class="item-header">
-                        <div class="thumb">
-                            <img src="./assets/images/movie/tomato2.png" alt="movie">
+            <div class="tab-area">
+                <div class="tab-item active">
+                    <form class="ticket-search-form">
+                        <div class="form-group large">
+                            <input type="text" placeholder="Search fo Movies">
+                            <button type="submit"><i class="fas fa-search"></i></button>
                         </div>
-                        <div class="counter-area">
-                            <span class="counter-item odometer" data-odometer-final="88">0</span>
+                        <div class="form-group">
+                            <div class="thumb">
+                                <img src="./assets/images/ticket/city.png" alt="ticket">
+                            </div>
+                            <span class="type">city</span>
+                            <select class="select-bar">
+                                <option value="london">London</option>
+                                <option value="dhaka">dhaka</option>
+                                <option value="rosario">rosario</option>
+                                <option value="madrid">madrid</option>
+                                <option value="koltaka">kolkata</option>
+                                <option value="rome">rome</option>
+                                <option value="khoksa">khoksa</option>
+                            </select>
                         </div>
-                    </div>
-                    <p>tomatometer</p>
+                        <div class="form-group">
+                            <div class="thumb">
+                                <img src="./assets/images/ticket/date.png" alt="ticket">
+                            </div>
+                            <span class="type">date</span>
+                            <select class="select-bar">
+                                <option value="26-12-19">23/10/2020</option>
+                                <option value="26-12-19">24/10/2020</option>
+                                <option value="26-12-19">25/10/2020</option>
+                                <option value="26-12-19">26/10/2020</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <div class="thumb">
+                                <img src="./assets/images/ticket/cinema.png" alt="ticket">
+                            </div>
+                            <span class="type">cinema</span>
+                            <select class="select-bar">
+                                <option value="Awaken">Awaken</option>
+                                <option value="dhaka">dhaka</option>
+                                <option value="rosario">rosario</option>
+                                <option value="madrid">madrid</option>
+                                <option value="koltaka">kolkata</option>
+                                <option value="rome">rome</option>
+                                <option value="khoksa">khoksa</option>
+                            </select>
+                        </div>
+                    </form>
                 </div>
-                <div class="item">
-                    <div class="item-header">
-                        <div class="thumb">
-                            <img src="./assets/images/movie/cake2.png" alt="movie">
+                <div class="tab-item">
+                    <form class="ticket-search-form">
+                        <div class="form-group large">
+                            <input type="text" placeholder="Search fo Events">
+                            <button type="submit"><i class="fas fa-search"></i></button>
                         </div>
-                        <div class="counter-area">
-                            <span class="counter-item odometer" data-odometer-final="88">0</span>
+                        <div class="form-group">
+                            <div class="thumb">
+                                <img src="./assets/images/ticket/city.png" alt="ticket">
+                            </div>
+                            <span class="type">city</span>
+                            <select class="select-bar">
+                                <option value="london">London</option>
+                                <option value="dhaka">dhaka</option>
+                                <option value="rosario">rosario</option>
+                                <option value="madrid">madrid</option>
+                                <option value="koltaka">kolkata</option>
+                                <option value="rome">rome</option>
+                                <option value="khoksa">khoksa</option>
+                            </select>
                         </div>
-                    </div>
-                    <p>audience Score</p>
+                        <div class="form-group">
+                            <div class="thumb">
+                                <img src="./assets/images/ticket/date.png" alt="ticket">
+                            </div>
+                            <span class="type">date</span>
+                            <select class="select-bar">
+                                <option value="26-12-19">23/10/2020</option>
+                                <option value="26-12-19">24/10/2020</option>
+                                <option value="26-12-19">25/10/2020</option>
+                                <option value="26-12-19">26/10/2020</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <div class="thumb">
+                                <img src="./assets/images/ticket/cinema.png" alt="ticket">
+                            </div>
+                            <span class="type">event</span>
+                            <select class="select-bar">
+                                <option value="angular">angular</option>
+                                <option value="startup">startup</option>
+                                <option value="rosario">rosario</option>
+                                <option value="madrid">madrid</option>
+                                <option value="koltaka">kolkata</option>
+                                <option value="Last-First">Last-First</option>
+                                <option value="wish">wish</option>
+                            </select>
+                        </div>
+                    </form>
                 </div>
-                <div class="item">
-                    <div class="item-header">
-                        <h5 class="title">4.5</h5>
-                        <div class="rated">
-                            <i class="fas fa-heart"></i>
-                            <i class="fas fa-heart"></i>
-                            <i class="fas fa-heart"></i>
-                            <i class="fas fa-heart"></i>
-                            <i class="fas fa-heart"></i>
+                <div class="tab-item">
+                    <form class="ticket-search-form">
+                        <div class="form-group large">
+                            <input type="text" placeholder="Search fo Sports">
+                            <button type="submit"><i class="fas fa-search"></i></button>
                         </div>
-                    </div>
-                    <p>Users Rating</p>
-                </div>
-                <div class="item">
-                    <div class="item-header">
-                        <div class="rated rate-it">
-                            <i class="fas fa-heart"></i>
-                            <i class="fas fa-heart"></i>
-                            <i class="fas fa-heart"></i>
-                            <i class="fas fa-heart"></i>
-                            <i class="fas fa-heart"></i>
+                        <div class="form-group">
+                            <div class="thumb">
+                                <img src="./assets/images/ticket/city.png" alt="ticket">
+                            </div>
+                            <span class="type">city</span>
+                            <select class="select-bar">
+                                <option value="london">London</option>
+                                <option value="dhaka">dhaka</option>
+                                <option value="rosario">rosario</option>
+                                <option value="madrid">madrid</option>
+                                <option value="koltaka">kolkata</option>
+                                <option value="rome">rome</option>
+                                <option value="khoksa">khoksa</option>
+                            </select>
                         </div>
-                        <h5 class="title">0.0</h5>
-                    </div>
-                    <p><a href="#0">Rate It</a></p>
+                        <div class="form-group">
+                            <div class="thumb">
+                                <img src="./assets/images/ticket/date.png" alt="ticket">
+                            </div>
+                            <span class="type">date</span>
+                            <select class="select-bar">
+                                <option value="26-12-19">23/10/2020</option>
+                                <option value="26-12-19">24/10/2020</option>
+                                <option value="26-12-19">25/10/2020</option>
+                                <option value="26-12-19">26/10/2020</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <div class="thumb">
+                                <img src="./assets/images/ticket/cinema.png" alt="ticket">
+                            </div>
+                            <span class="type">sports</span>
+                            <select class="select-bar">
+                                <option value="football">football</option>
+                                <option value="cricket">cricket</option>
+                                <option value="cabadi">cabadi</option>
+                                <option value="madrid">madrid</option>
+                                <option value="gadon">gadon</option>
+                                <option value="rome">rome</option>
+                                <option value="khoksa">khoksa</option>
+                            </select>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <a href="#0" class="custom-button">book tickets</a>
         </div>
     </div>
 </section>
-<!-- ==========Book-Section========== -->
+<!-- ==========Ticket-Search========== -->
 
 <!-- ==========Movie-Section========== -->
-<section class="movie-details-section padding-top padding-bottom">
+<section class="movie-section padding-top padding-bottom">
     <div class="container">
-        <div class="row justify-content-center flex-wrap-reverse mb--50">
-            <div class="col-lg-3 col-sm-10 col-md-6 mb-50">
-                <div class="widget-1 widget-tags">
-                    <ul>
-                        <li>
-                            <a href="#0">2D</a>
-                        </li>
-                        <li>
-                            <a href="#0">imax 2D</a>
-                        </li>
-                        <li>
-                            <a href="#0">4DX</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="widget-1 widget-offer">
-                    <h3 class="title">Applicable offer</h3>
-                    <div class="offer-body">
-                        <div class="offer-item">
-                            <div class="thumb">
-                                <img src="./assets/images/sidebar/offer01.png" alt="sidebar">
-                            </div>
-                            <div class="content">
-                                <h6>
-                                    <a href="#0">Amazon Pay Cashback Offer</a>
-                                </h6>
-                                <p>Win Cashback Upto Rs 300*</p>
-                            </div>
-                        </div>
-                        <div class="offer-item">
-                            <div class="thumb">
-                                <img src="./assets/images/sidebar/offer02.png" alt="sidebar">
-                            </div>
-                            <div class="content">
-                                <h6>
-                                    <a href="#0">PayPal Offer</a>
-                                </h6>
-                                <p>Transact first time with Paypal and
-                                    get 100% cashback up to Rs. 500</p>
-                            </div>
-                        </div>
-                        <div class="offer-item">
-                            <div class="thumb">
-                                <img src="./assets/images/sidebar/offer03.png" alt="sidebar">
-                            </div>
-                            <div class="content">
-                                <h6>
-                                    <a href="#0">HDFC Bank Offer</a>
-                                </h6>
-                                <p>Get 15% discount up to INR 100*
-                                    and INR 50* off on F&B T&C apply</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="row flex-wrap-reverse justify-content-center">
+            <div class="col-sm-10 col-md-8 col-lg-3">
                 <div class="widget-1 widget-banner">
                     <div class="widget-1-body">
                         <a href="#0">
@@ -170,341 +216,1261 @@
                         </a>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-9 mb-50">
-                <div class="movie-details">
-                    <h3 class="title">photos</h3>
-                    <div class="details-photos owl-carousel">
-                        <div class="thumb">
-                            <a href="./assets/images/movie/movie-details01.jpg" class="img-pop">
-                                <img src="./assets/images/movie/movie-details01.jpg" alt="movie">
-                            </a>
-                        </div>
-                        <div class="thumb">
-                            <a href="./assets/images/movie/movie-details02.jpg" class="img-pop">
-                                <img src="./assets/images/movie/movie-details02.jpg" alt="movie">
-                            </a>
-                        </div>
-                        <div class="thumb">
-                            <a href="./assets/images/movie/movie-details03.jpg" class="img-pop">
-                                <img src="./assets/images/movie/movie-details03.jpg" alt="movie">
-                            </a>
-                        </div>
-                        <div class="thumb">
-                            <a href="./assets/images/movie/movie-details01.jpg" class="img-pop">
-                                <img src="./assets/images/movie/movie-details01.jpg" alt="movie">
-                            </a>
-                        </div>
-                        <div class="thumb">
-                            <a href="./assets/images/movie/movie-details02.jpg" class="img-pop">
-                                <img src="./assets/images/movie/movie-details02.jpg" alt="movie">
-                            </a>
-                        </div>
-                        <div class="thumb">
-                            <a href="./assets/images/movie/movie-details03.jpg" class="img-pop">
-                                <img src="./assets/images/movie/movie-details03.jpg" alt="movie">
-                            </a>
+                <div class="widget-1 widget-check">
+                    <div class="widget-header">
+                        <h5 class="m-title">Filter By</h5> <a href="#0" class="clear-check">Clear All</a>
+                    </div>
+                    <div class="widget-1-body">
+                        <h6 class="subtitle">Language</h6>
+                        <div class="check-area">
+                            <div class="form-group">
+                                <input type="checkbox" name="lang" id="lang1"><label for="lang1">Tamil</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="lang" id="lang2"><label for="lang2">Telegu</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="lang" id="lang3"><label for="lang3">Hindi</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="lang" id="lang4"><label for="lang4">English</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="lang" id="lang5"><label for="lang5">Multiple
+                                    Language</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="lang" id="lang6"><label for="lang6">Gujrati</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="lang" id="lang7"><label for="lang7">Bangla</label>
+                            </div>
                         </div>
                     </div>
-                    <div class="tab summery-review">
-                        <ul class="tab-menu">
-                            <li class="active">
-                                summery
-                            </li>
-                            <li>
-                                user review <span>147</span>
-                            </li>
-                        </ul>
-                        <div class="tab-area">
-                            <div class="tab-item active">
+                </div>
+                <div class="widget-1 widget-check">
+                    <div class="widget-1-body">
+                        <h6 class="subtitle">experience</h6>
+                        <div class="check-area">
+                            <div class="form-group">
+                                <input type="checkbox" name="mode" id="mode1"><label for="mode1">2d</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="mode" id="mode2"><label for="mode2">3d</label>
+                            </div>
+                        </div>
+                        <div class="add-check-area">
+                            <a href="#0">view more <i class="plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-1 widget-check">
+                    <div class="widget-1-body">
+                        <h6 class="subtitle">genre</h6>
+                        <div class="check-area">
+                            <div class="form-group">
+                                <input type="checkbox" name="genre" id="genre1"><label for="genre1">thriller</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="genre" id="genre2"><label for="genre2">horror</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="genre" id="genre3"><label for="genre3">drama</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="genre" id="genre4"><label for="genre4">romance</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="genre" id="genre5"><label for="genre5">action</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="genre" id="genre6"><label for="genre6">comedy</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="genre" id="genre7"><label for="genre7">romantic</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="genre" id="genre8"><label for="genre8">animation</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="genre" id="genre9"><label for="genre9">sci-fi</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="genre" id="genre10"><label for="genre10">adventure</label>
+                            </div>
+                        </div>
+                        <div class="add-check-area">
+                            <a href="#0">view more <i class="plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-1 widget-banner">
+                    <div class="widget-1-body">
+                        <a href="#0">
+                            <img src="./assets/images/sidebar/banner/banner02.jpg" alt="banner">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 mb-50 mb-lg-0">
+                <div class="filter-tab tab">
+                    <div class="filter-area">
+                        <div class="filter-main">
+                            <div class="left">
                                 <div class="item">
-                                    <h5 class="sub-title">Synopsis</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula eros sit
-                                        amet est tincidunt aliquet. Fusce laoreet ligula ac ultrices eleifend. Donec
-                                        hendrerit fringilla odio, ut feugiat mi convallis nec. Fusce elit ex, blandit
-                                        vitae mattis sit amet, iaculis ac elit. Ut diam mauris, viverra sit amet dictum
-                                        vel, aliquam ac quam. Ut mi nisl, fringilla sit amet erat et, convallis
-                                        porttitor ligula. Sed auctor, orci id luctus venenatis, dui dolor euismod risus,
-                                        et pharetra orci lectus quis sapien. Duis blandit ipsum ac consectetur
-                                        scelerisque. </p>
+                                    <span class="show">Show :</span>
+                                    <select class="select-bar">
+                                        <option value="12">12</option>
+                                        <option value="15">15</option>
+                                        <option value="18">18</option>
+                                        <option value="21">21</option>
+                                        <option value="24">24</option>
+                                        <option value="27">27</option>
+                                        <option value="30">30</option>
+                                    </select>
                                 </div>
                                 <div class="item">
-                                    <div class="header">
-                                        <h5 class="sub-title">cast</h5>
-                                        <div class="navigation">
-                                            <div class="cast-prev"><i class="flaticon-double-right-arrows-angles"></i>
-                                            </div>
-                                            <div class="cast-next"><i class="flaticon-double-right-arrows-angles"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="casting-slider owl-carousel">
-                                        <div class="cast-item">
-                                            <div class="cast-thumb">
-                                                <a href="#0">
-                                                    <img src="./assets/images/cast/cast01.jpg" alt="cast">
-                                                </a>
-                                            </div>
-                                            <div class="cast-content">
-                                                <h6 class="cast-title"><a href="#0">Bill Hader</a></h6>
-                                                <span class="cate">actor</span>
-                                                <p>As Richie Tozier</p>
-                                            </div>
-                                        </div>
-                                        <div class="cast-item">
-                                            <div class="cast-thumb">
-                                                <a href="#0">
-                                                    <img src="./assets/images/cast/cast02.jpg" alt="cast">
-                                                </a>
-                                            </div>
-                                            <div class="cast-content">
-                                                <h6 class="cast-title"><a href="#0">nora hardy</a></h6>
-                                                <span class="cate">actor</span>
-                                                <p>As raven</p>
-                                            </div>
-                                        </div>
-                                        <div class="cast-item">
-                                            <div class="cast-thumb">
-                                                <a href="#0">
-                                                    <img src="./assets/images/cast/cast03.jpg" alt="cast">
-                                                </a>
-                                            </div>
-                                            <div class="cast-content">
-                                                <h6 class="cast-title"><a href="#0">alvin peters</a></h6>
-                                                <span class="cate">actor</span>
-                                                <p>As magneto</p>
-                                            </div>
-                                        </div>
-                                        <div class="cast-item">
-                                            <div class="cast-thumb">
-                                                <a href="#0">
-                                                    <img src="./assets/images/cast/cast04.jpg" alt="cast">
-                                                </a>
-                                            </div>
-                                            <div class="cast-content">
-                                                <h6 class="cast-title"><a href="#0">josh potter</a></h6>
-                                                <span class="cate">actor</span>
-                                                <p>As quicksilver</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="header">
-                                        <h5 class="sub-title">crew</h5>
-                                        <div class="navigation">
-                                            <div class="cast-prev-2"><i class="flaticon-double-right-arrows-angles"></i>
-                                            </div>
-                                            <div class="cast-next-2"><i class="flaticon-double-right-arrows-angles"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="casting-slider-two owl-carousel">
-                                        <div class="cast-item">
-                                            <div class="cast-thumb">
-                                                <a href="#0">
-                                                    <img src="./assets/images/cast/cast05.jpg" alt="cast">
-                                                </a>
-                                            </div>
-                                            <div class="cast-content">
-                                                <h6 class="cast-title"><a href="#0">pete warren</a></h6>
-                                                <span class="cate">actor</span>
-                                            </div>
-                                        </div>
-                                        <div class="cast-item">
-                                            <div class="cast-thumb">
-                                                <a href="#0">
-                                                    <img src="./assets/images/cast/cast06.jpg" alt="cast">
-                                                </a>
-                                            </div>
-                                            <div class="cast-content">
-                                                <h6 class="cast-title"><a href="#0">howard bass</a></h6>
-                                                <span class="cate">executive producer</span>
-                                            </div>
-                                        </div>
-                                        <div class="cast-item">
-                                            <div class="cast-thumb">
-                                                <a href="#0">
-                                                    <img src="./assets/images/cast/cast07.jpg" alt="cast">
-                                                </a>
-                                            </div>
-                                            <div class="cast-content">
-                                                <h6 class="cast-title"><a href="#0">naomi smith</a></h6>
-                                                <span class="cate">producer</span>
-                                            </div>
-                                        </div>
-                                        <div class="cast-item">
-                                            <div class="cast-thumb">
-                                                <a href="#0">
-                                                    <img src="./assets/images/cast/cast08.jpg" alt="cast">
-                                                </a>
-                                            </div>
-                                            <div class="cast-content">
-                                                <h6 class="cast-title"><a href="#0">tom martinez</a></h6>
-                                                <span class="cate">producer</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <span class="show">Sort By :</span>
+                                    <select class="select-bar">
+                                        <option value="showing">now showing</option>
+                                        <option value="exclusive">exclusive</option>
+                                        <option value="trending">trending</option>
+                                        <option value="most-view">most view</option>
+                                    </select>
                                 </div>
                             </div>
-                            <div class="tab-item">
-                                <div class="movie-review-item">
-                                    <div class="author">
-                                        <div class="thumb">
-                                            <a href="#0">
-                                                <img src="./assets/images/cast/cast02.jpg" alt="cast">
+                            <ul class="grid-button tab-menu">
+                                <li>
+                                    <i class="fas fa-th"></i>
+                                </li>
+                                <li class="active">
+                                    <i class="fas fa-bars"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-area">
+                        <div class="tab-item">
+                            <div class="row mb-10 justify-content-center">
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="movie-grid">
+                                        <div class="movie-thumb c-thumb">
+                                            <a href="movie-details.html">
+                                                <img src="./assets/images/movie/movie01.jpg" alt="movie">
                                             </a>
                                         </div>
-                                        <div class="movie-review-info">
-                                            <span class="reply-date">13 Days Ago</span>
-                                            <h6 class="subtitle"><a href="#0">minkuk seo</a></h6>
-                                            <span><i class="fas fa-check"></i> verified review</span>
-                                        </div>
-                                    </div>
-                                    <div class="movie-review-content">
-                                        <div class="review">
-                                            <i class="flaticon-favorite-heart-button"></i>
-                                            <i class="flaticon-favorite-heart-button"></i>
-                                            <i class="flaticon-favorite-heart-button"></i>
-                                            <i class="flaticon-favorite-heart-button"></i>
-                                            <i class="flaticon-favorite-heart-button"></i>
-                                        </div>
-                                        <h6 class="cont-title">Awesome Movie</h6>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer volutpat
-                                            enim non ante egestas vehicula. Suspendisse potenti. Fusce malesuada
-                                            fringilla lectus venenatis porttitor. </p>
-                                        <div class="review-meta">
-                                            <a href="#0">
-                                                <i class="flaticon-hand"></i><span>8</span>
-                                            </a>
-                                            <a href="#0" class="dislike">
-                                                <i class="flaticon-dont-like-symbol"></i><span>0</span>
-                                            </a>
-                                            <a href="#0">
-                                                Report Abuse
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="movie-review-item">
-                                    <div class="author">
-                                        <div class="thumb">
-                                            <a href="#0">
-                                                <img src="./assets/images/cast/cast04.jpg" alt="cast">
-                                            </a>
-                                        </div>
-                                        <div class="movie-review-info">
-                                            <span class="reply-date">13 Days Ago</span>
-                                            <h6 class="subtitle"><a href="#0">rudra rai</a></h6>
-                                            <span><i class="fas fa-check"></i> verified review</span>
-                                        </div>
-                                    </div>
-                                    <div class="movie-review-content">
-                                        <div class="review">
-                                            <i class="flaticon-favorite-heart-button"></i>
-                                            <i class="flaticon-favorite-heart-button"></i>
-                                            <i class="flaticon-favorite-heart-button"></i>
-                                            <i class="flaticon-favorite-heart-button"></i>
-                                            <i class="flaticon-favorite-heart-button"></i>
-                                        </div>
-                                        <h6 class="cont-title">Awesome Movie</h6>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer volutpat
-                                            enim non ante egestas vehicula. Suspendisse potenti. Fusce malesuada
-                                            fringilla lectus venenatis porttitor. </p>
-                                        <div class="review-meta">
-                                            <a href="#0">
-                                                <i class="flaticon-hand"></i><span>8</span>
-                                            </a>
-                                            <a href="#0" class="dislike">
-                                                <i class="flaticon-dont-like-symbol"></i><span>0</span>
-                                            </a>
-                                            <a href="#0">
-                                                Report Abuse
-                                            </a>
+                                        <div class="movie-content bg-one">
+                                            <h5 class="title m-0">
+                                                <a href="movie-details.html">alone</a>
+                                            </h5>
+                                            <ul class="movie-rating-percent">
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/cake.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="movie-review-item">
-                                    <div class="author">
-                                        <div class="thumb">
-                                            <a href="#0">
-                                                <img src="./assets/images/cast/cast01.jpg" alt="cast">
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="movie-grid">
+                                        <div class="movie-thumb c-thumb">
+                                            <a href="movie-details.html">
+                                                <img src="./assets/images/movie/movie02.jpg" alt="movie">
                                             </a>
                                         </div>
-                                        <div class="movie-review-info">
-                                            <span class="reply-date">13 Days Ago</span>
-                                            <h6 class="subtitle"><a href="#0">rafuj</a></h6>
-                                            <span><i class="fas fa-check"></i> verified review</span>
-                                        </div>
-                                    </div>
-                                    <div class="movie-review-content">
-                                        <div class="review">
-                                            <i class="flaticon-favorite-heart-button"></i>
-                                            <i class="flaticon-favorite-heart-button"></i>
-                                            <i class="flaticon-favorite-heart-button"></i>
-                                            <i class="flaticon-favorite-heart-button"></i>
-                                            <i class="flaticon-favorite-heart-button"></i>
-                                        </div>
-                                        <h6 class="cont-title">Awesome Movie</h6>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer volutpat
-                                            enim non ante egestas vehicula. Suspendisse potenti. Fusce malesuada
-                                            fringilla lectus venenatis porttitor. </p>
-                                        <div class="review-meta">
-                                            <a href="#0">
-                                                <i class="flaticon-hand"></i><span>8</span>
-                                            </a>
-                                            <a href="#0" class="dislike">
-                                                <i class="flaticon-dont-like-symbol"></i><span>0</span>
-                                            </a>
-                                            <a href="#0">
-                                                Report Abuse
-                                            </a>
+                                        <div class="movie-content bg-one">
+                                            <h5 class="title m-0">
+                                                <a href="movie-details.html">mars</a>
+                                            </h5>
+                                            <ul class="movie-rating-percent">
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/cake.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="movie-review-item">
-                                    <div class="author">
-                                        <div class="thumb">
-                                            <a href="#0">
-                                                <img src="./assets/images/cast/cast03.jpg" alt="cast">
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="movie-grid">
+                                        <div class="movie-thumb c-thumb">
+                                            <a href="movie-details.html">
+                                                <img src="./assets/images/movie/movie03.jpg" alt="movie">
                                             </a>
                                         </div>
-                                        <div class="movie-review-info">
-                                            <span class="reply-date">13 Days Ago</span>
-                                            <h6 class="subtitle"><a href="#0">bela bose</a></h6>
-                                            <span><i class="fas fa-check"></i> verified review</span>
-                                        </div>
-                                    </div>
-                                    <div class="movie-review-content">
-                                        <div class="review">
-                                            <i class="flaticon-favorite-heart-button"></i>
-                                            <i class="flaticon-favorite-heart-button"></i>
-                                            <i class="flaticon-favorite-heart-button"></i>
-                                            <i class="flaticon-favorite-heart-button"></i>
-                                            <i class="flaticon-favorite-heart-button"></i>
-                                        </div>
-                                        <h6 class="cont-title">Awesome Movie</h6>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer volutpat
-                                            enim non ante egestas vehicula. Suspendisse potenti. Fusce malesuada
-                                            fringilla lectus venenatis porttitor. </p>
-                                        <div class="review-meta">
-                                            <a href="#0">
-                                                <i class="flaticon-hand"></i><span>8</span>
-                                            </a>
-                                            <a href="#0" class="dislike">
-                                                <i class="flaticon-dont-like-symbol"></i><span>0</span>
-                                            </a>
-                                            <a href="#0">
-                                                Report Abuse
-                                            </a>
+                                        <div class="movie-content bg-one">
+                                            <h5 class="title m-0">
+                                                <a href="movie-details.html">venus</a>
+                                            </h5>
+                                            <ul class="movie-rating-percent">
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/cake.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="load-more text-center">
-                                    <a href="#0" class="custom-button transparent">load more</a>
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="movie-grid">
+                                        <div class="movie-thumb c-thumb">
+                                            <a href="movie-details.html">
+                                                <img src="./assets/images/movie/movie04.jpg" alt="movie">
+                                            </a>
+                                        </div>
+                                        <div class="movie-content bg-one">
+                                            <h5 class="title m-0">
+                                                <a href="movie-details.html">on watch</a>
+                                            </h5>
+                                            <ul class="movie-rating-percent">
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/cake.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="movie-grid">
+                                        <div class="movie-thumb c-thumb">
+                                            <a href="movie-details.html">
+                                                <img src="./assets/images/movie/movie05.jpg" alt="movie">
+                                            </a>
+                                        </div>
+                                        <div class="movie-content bg-one">
+                                            <h5 class="title m-0">
+                                                <a href="movie-details.html">fury</a>
+                                            </h5>
+                                            <ul class="movie-rating-percent">
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/cake.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="movie-grid">
+                                        <div class="movie-thumb c-thumb">
+                                            <a href="movie-details.html">
+                                                <img src="./assets/images/movie/movie06.jpg" alt="movie">
+                                            </a>
+                                        </div>
+                                        <div class="movie-content bg-one">
+                                            <h5 class="title m-0">
+                                                <a href="movie-details.html">trooper</a>
+                                            </h5>
+                                            <ul class="movie-rating-percent">
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/cake.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="movie-grid">
+                                        <div class="movie-thumb c-thumb">
+                                            <a href="movie-details.html">
+                                                <img src="./assets/images/movie/movie07.jpg" alt="movie">
+                                            </a>
+                                        </div>
+                                        <div class="movie-content bg-one">
+                                            <h5 class="title m-0">
+                                                <a href="movie-details.html">horror night</a>
+                                            </h5>
+                                            <ul class="movie-rating-percent">
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/cake.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="movie-grid">
+                                        <div class="movie-thumb c-thumb">
+                                            <a href="movie-details.html">
+                                                <img src="./assets/images/movie/movie08.jpg" alt="movie">
+                                            </a>
+                                        </div>
+                                        <div class="movie-content bg-one">
+                                            <h5 class="title m-0">
+                                                <a href="movie-details.html">the lost name</a>
+                                            </h5>
+                                            <ul class="movie-rating-percent">
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/cake.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="movie-grid">
+                                        <div class="movie-thumb c-thumb">
+                                            <a href="movie-details.html">
+                                                <img src="./assets/images/movie/movie09.jpg" alt="movie">
+                                            </a>
+                                        </div>
+                                        <div class="movie-content bg-one">
+                                            <h5 class="title m-0">
+                                                <a href="movie-details.html">calm stedfast</a>
+                                            </h5>
+                                            <ul class="movie-rating-percent">
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/cake.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="movie-grid">
+                                        <div class="movie-thumb c-thumb">
+                                            <a href="movie-details.html">
+                                                <img src="./assets/images/movie/movie10.jpg" alt="movie">
+                                            </a>
+                                        </div>
+                                        <div class="movie-content bg-one">
+                                            <h5 class="title m-0">
+                                                <a href="movie-details.html">criminal on party</a>
+                                            </h5>
+                                            <ul class="movie-rating-percent">
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/cake.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="movie-grid">
+                                        <div class="movie-thumb c-thumb">
+                                            <a href="movie-details.html">
+                                                <img src="./assets/images/movie/movie11.jpg" alt="movie">
+                                            </a>
+                                        </div>
+                                        <div class="movie-content bg-one">
+                                            <h5 class="title m-0">
+                                                <a href="movie-details.html">halloween party</a>
+                                            </h5>
+                                            <ul class="movie-rating-percent">
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/cake.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="movie-grid">
+                                        <div class="movie-thumb c-thumb">
+                                            <a href="movie-details.html">
+                                                <img src="./assets/images/movie/movie12.jpg" alt="movie">
+                                            </a>
+                                        </div>
+                                        <div class="movie-content bg-one">
+                                            <h5 class="title m-0">
+                                                <a href="movie-details.html">the most wanted</a>
+                                            </h5>
+                                            <ul class="movie-rating-percent">
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="./assets/images/movie/cake.png" alt="movie">
+                                                    </div>
+                                                    <span class="content">88%</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="tab-item active">
+                            <div class="movie-area mb-10">
+                                <div class="movie-list">
+                                    <div class="movie-thumb c-thumb">
+                                        <a href="movie-details.html" class="w-100 bg_img h-100"
+                                            data-background="./assets/images/movie/movie01.jpg">
+                                            <img class="d-sm-none" src="./assets/images/movie/movie01.jpg" alt="movie">
+                                        </a>
+                                    </div>
+                                    <div class="movie-content bg-one">
+                                        <h5 class="title">
+                                            <a href="movie-details.html">alone</a>
+                                        </h5>
+                                        <p class="duration">2hrs 50 min</p>
+                                        <div class="movie-tags">
+                                            <a href="#0">action</a>
+                                            <a href="#0">adventure</a>
+                                            <a href="#0">fantasy</a>
+                                        </div>
+                                        <div class="release">
+                                            <span>Release Date : </span> <a href="#0"> November 8 , 2020</a>
+                                        </div>
+                                        <ul class="movie-rating-percent">
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/cake.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                        </ul>
+                                        <div class="book-area">
+                                            <div class="book-ticket">
+                                                <div class="react-item">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/heart.png" alt="icons">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item mr-auto">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/book.png" alt="icons">
+                                                        </div>
+                                                        <span>book ticket</span>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item">
+                                                    <a href="#0" class="popup-video">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/play-button.png"
+                                                                alt="icons">
+                                                        </div>
+                                                        <span>watch trailer</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="movie-list">
+                                    <div class="movie-thumb c-thumb">
+                                        <a href="movie-details.html" class="w-100 bg_img h-100"
+                                            data-background="./assets/images/movie/movie02.jpg">
+                                            <img class="d-sm-none" src="./assets/images/movie/movie02.jpg" alt="movie">
+                                        </a>
+                                    </div>
+                                    <div class="movie-content bg-one">
+                                        <h5 class="title">
+                                            <a href="movie-details.html">mars</a>
+                                        </h5>
+                                        <p class="duration">2hrs 50 min</p>
+                                        <div class="movie-tags">
+                                            <a href="#0">action</a>
+                                            <a href="#0">adventure</a>
+                                            <a href="#0">fantasy</a>
+                                        </div>
+                                        <div class="release">
+                                            <span>Release Date : </span> <a href="#0"> November 8 , 2020</a>
+                                        </div>
+                                        <ul class="movie-rating-percent">
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/cake.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                        </ul>
+                                        <div class="book-area">
+                                            <div class="book-ticket">
+                                                <div class="react-item">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/heart.png" alt="icons">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item mr-auto">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/book.png" alt="icons">
+                                                        </div>
+                                                        <span>book ticket</span>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item">
+                                                    <a href="#0" class="popup-video">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/play-button.png"
+                                                                alt="icons">
+                                                        </div>
+                                                        <span>watch trailer</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="movie-list">
+                                    <div class="movie-thumb c-thumb">
+                                        <a href="movie-details.html" class="w-100 bg_img h-100"
+                                            data-background="./assets/images/movie/movie03.jpg">
+                                            <img class="d-sm-none" src="./assets/images/movie/movie03.jpg" alt="movie">
+                                        </a>
+                                    </div>
+                                    <div class="movie-content bg-one">
+                                        <h5 class="title">
+                                            <a href="movie-details.html">venus</a>
+                                        </h5>
+                                        <p class="duration">2hrs 50 min</p>
+                                        <div class="movie-tags">
+                                            <a href="#0">action</a>
+                                            <a href="#0">adventure</a>
+                                            <a href="#0">fantasy</a>
+                                        </div>
+                                        <div class="release">
+                                            <span>Release Date : </span> <a href="#0"> November 8 , 2020</a>
+                                        </div>
+                                        <ul class="movie-rating-percent">
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/cake.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                        </ul>
+                                        <div class="book-area">
+                                            <div class="book-ticket">
+                                                <div class="react-item">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/heart.png" alt="icons">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item mr-auto">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/book.png" alt="icons">
+                                                        </div>
+                                                        <span>book ticket</span>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item">
+                                                    <a href="#0" class="popup-video">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/play-button.png"
+                                                                alt="icons">
+                                                        </div>
+                                                        <span>watch trailer</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="movie-list">
+                                    <div class="movie-thumb c-thumb">
+                                        <a href="movie-details.html" class="w-100 bg_img h-100"
+                                            data-background="./assets/images/movie/movie04.jpg">
+                                            <img class="d-sm-none" src="./assets/images/movie/movie04.jpg" alt="movie">
+                                        </a>
+                                    </div>
+                                    <div class="movie-content bg-one">
+                                        <h5 class="title">
+                                            <a href="movie-details.html">on watch</a>
+                                        </h5>
+                                        <p class="duration">2hrs 50 min</p>
+                                        <div class="movie-tags">
+                                            <a href="#0">action</a>
+                                            <a href="#0">adventure</a>
+                                            <a href="#0">fantasy</a>
+                                        </div>
+                                        <div class="release">
+                                            <span>Release Date : </span> <a href="#0"> November 8 , 2020</a>
+                                        </div>
+                                        <ul class="movie-rating-percent">
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/cake.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                        </ul>
+                                        <div class="book-area">
+                                            <div class="book-ticket">
+                                                <div class="react-item">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/heart.png" alt="icons">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item mr-auto">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/book.png" alt="icons">
+                                                        </div>
+                                                        <span>book ticket</span>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item">
+                                                    <a href="#0" class="popup-video">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/play-button.png"
+                                                                alt="icons">
+                                                        </div>
+                                                        <span>watch trailer</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="movie-list">
+                                    <div class="movie-thumb c-thumb">
+                                        <a href="movie-details.html" class="w-100 bg_img h-100"
+                                            data-background="./assets/images/movie/movie05.jpg">
+                                            <img class="d-sm-none" src="./assets/images/movie/movie05.jpg" alt="movie">
+                                        </a>
+                                    </div>
+                                    <div class="movie-content bg-one">
+                                        <h5 class="title">
+                                            <a href="movie-details.html">fury</a>
+                                        </h5>
+                                        <p class="duration">2hrs 50 min</p>
+                                        <div class="movie-tags">
+                                            <a href="#0">action</a>
+                                            <a href="#0">adventure</a>
+                                            <a href="#0">fantasy</a>
+                                        </div>
+                                        <div class="release">
+                                            <span>Release Date : </span> <a href="#0"> November 8 , 2020</a>
+                                        </div>
+                                        <ul class="movie-rating-percent">
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/cake.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                        </ul>
+                                        <div class="book-area">
+                                            <div class="book-ticket">
+                                                <div class="react-item">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/heart.png" alt="icons">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item mr-auto">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/book.png" alt="icons">
+                                                        </div>
+                                                        <span>book ticket</span>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item">
+                                                    <a href="#0" class="popup-video">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/play-button.png"
+                                                                alt="icons">
+                                                        </div>
+                                                        <span>watch trailer</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="movie-list">
+                                    <div class="movie-thumb c-thumb">
+                                        <a href="movie-details.html" class="w-100 bg_img h-100"
+                                            data-background="./assets/images/movie/movie06.jpg">
+                                            <img class="d-sm-none" src="./assets/images/movie/movie06.jpg" alt="movie">
+                                        </a>
+                                    </div>
+                                    <div class="movie-content bg-one">
+                                        <h5 class="title">
+                                            <a href="movie-details.html">trooper</a>
+                                        </h5>
+                                        <p class="duration">2hrs 50 min</p>
+                                        <div class="movie-tags">
+                                            <a href="#0">action</a>
+                                            <a href="#0">adventure</a>
+                                            <a href="#0">fantasy</a>
+                                        </div>
+                                        <div class="release">
+                                            <span>Release Date : </span> <a href="#0"> November 8 , 2020</a>
+                                        </div>
+                                        <ul class="movie-rating-percent">
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/cake.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                        </ul>
+                                        <div class="book-area">
+                                            <div class="book-ticket">
+                                                <div class="react-item">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/heart.png" alt="icons">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item mr-auto">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/book.png" alt="icons">
+                                                        </div>
+                                                        <span>book ticket</span>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item">
+                                                    <a href="#0" class="popup-video">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/play-button.png"
+                                                                alt="icons">
+                                                        </div>
+                                                        <span>watch trailer</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="movie-list">
+                                    <div class="movie-thumb c-thumb">
+                                        <a href="movie-details.html" class="w-100 bg_img h-100"
+                                            data-background="./assets/images/movie/movie07.jpg">
+                                            <img class="d-sm-none" src="./assets/images/movie/movie07.jpg" alt="movie">
+                                        </a>
+                                    </div>
+                                    <div class="movie-content bg-one">
+                                        <h5 class="title">
+                                            <a href="movie-details.html">horror night</a>
+                                        </h5>
+                                        <p class="duration">2hrs 50 min</p>
+                                        <div class="movie-tags">
+                                            <a href="#0">action</a>
+                                            <a href="#0">adventure</a>
+                                            <a href="#0">fantasy</a>
+                                        </div>
+                                        <div class="release">
+                                            <span>Release Date : </span> <a href="#0"> November 8 , 2020</a>
+                                        </div>
+                                        <ul class="movie-rating-percent">
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/cake.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                        </ul>
+                                        <div class="book-area">
+                                            <div class="book-ticket">
+                                                <div class="react-item">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/heart.png" alt="icons">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item mr-auto">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/book.png" alt="icons">
+                                                        </div>
+                                                        <span>book ticket</span>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item">
+                                                    <a href="#0" class="popup-video">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/play-button.png"
+                                                                alt="icons">
+                                                        </div>
+                                                        <span>watch trailer</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="movie-list">
+                                    <div class="movie-thumb c-thumb">
+                                        <a href="movie-details.html" class="w-100 bg_img h-100"
+                                            data-background="./assets/images/movie/movie08.jpg">
+                                            <img class="d-sm-none" src="./assets/images/movie/movie08.jpg" alt="movie">
+                                        </a>
+                                    </div>
+                                    <div class="movie-content bg-one">
+                                        <h5 class="title">
+                                            <a href="movie-details.html">the lost name</a>
+                                        </h5>
+                                        <p class="duration">2hrs 50 min</p>
+                                        <div class="movie-tags">
+                                            <a href="#0">action</a>
+                                            <a href="#0">adventure</a>
+                                            <a href="#0">fantasy</a>
+                                        </div>
+                                        <div class="release">
+                                            <span>Release Date : </span> <a href="#0"> November 8 , 2020</a>
+                                        </div>
+                                        <ul class="movie-rating-percent">
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/cake.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                        </ul>
+                                        <div class="book-area">
+                                            <div class="book-ticket">
+                                                <div class="react-item">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/heart.png" alt="icons">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item mr-auto">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/book.png" alt="icons">
+                                                        </div>
+                                                        <span>book ticket</span>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item">
+                                                    <a href="#0" class="popup-video">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/play-button.png"
+                                                                alt="icons">
+                                                        </div>
+                                                        <span>watch trailer</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="movie-list">
+                                    <div class="movie-thumb c-thumb">
+                                        <a href="movie-details.html" class="w-100 bg_img h-100"
+                                            data-background="./assets/images/movie/movie09.jpg">
+                                            <img class="d-sm-none" src="./assets/images/movie/movie09.jpg" alt="movie">
+                                        </a>
+                                    </div>
+                                    <div class="movie-content bg-one">
+                                        <h5 class="title">
+                                            <a href="movie-details.html">calm stedfast</a>
+                                        </h5>
+                                        <p class="duration">2hrs 50 min</p>
+                                        <div class="movie-tags">
+                                            <a href="#0">action</a>
+                                            <a href="#0">adventure</a>
+                                            <a href="#0">fantasy</a>
+                                        </div>
+                                        <div class="release">
+                                            <span>Release Date : </span> <a href="#0"> November 8 , 2020</a>
+                                        </div>
+                                        <ul class="movie-rating-percent">
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/cake.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                        </ul>
+                                        <div class="book-area">
+                                            <div class="book-ticket">
+                                                <div class="react-item">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/heart.png" alt="icons">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item mr-auto">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/book.png" alt="icons">
+                                                        </div>
+                                                        <span>book ticket</span>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item">
+                                                    <a href="#0" class="popup-video">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/play-button.png"
+                                                                alt="icons">
+                                                        </div>
+                                                        <span>watch trailer</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="movie-list">
+                                    <div class="movie-thumb c-thumb">
+                                        <a href="movie-details.html" class="w-100 bg_img h-100"
+                                            data-background="./assets/images/movie/movie10.jpg">
+                                            <img class="d-sm-none" src="./assets/images/movie/movie10.jpg" alt="movie">
+                                        </a>
+                                    </div>
+                                    <div class="movie-content bg-one">
+                                        <h5 class="title">
+                                            <a href="movie-details.html">criminal on party</a>
+                                        </h5>
+                                        <p class="duration">2hrs 50 min</p>
+                                        <div class="movie-tags">
+                                            <a href="#0">action</a>
+                                            <a href="#0">adventure</a>
+                                            <a href="#0">fantasy</a>
+                                        </div>
+                                        <div class="release">
+                                            <span>Release Date : </span> <a href="#0"> November 8 , 2020</a>
+                                        </div>
+                                        <ul class="movie-rating-percent">
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/cake.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                        </ul>
+                                        <div class="book-area">
+                                            <div class="book-ticket">
+                                                <div class="react-item">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/heart.png" alt="icons">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item mr-auto">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/book.png" alt="icons">
+                                                        </div>
+                                                        <span>book ticket</span>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item">
+                                                    <a href="#0" class="popup-video">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/play-button.png"
+                                                                alt="icons">
+                                                        </div>
+                                                        <span>watch trailer</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="movie-list">
+                                    <div class="movie-thumb c-thumb">
+                                        <a href="movie-details.html" class="w-100 bg_img h-100"
+                                            data-background="./assets/images/movie/movie11.jpg">
+                                            <img class="d-sm-none" src="./assets/images/movie/movie11.jpg" alt="movie">
+                                        </a>
+                                    </div>
+                                    <div class="movie-content bg-one">
+                                        <h5 class="title">
+                                            <a href="movie-details.html">halloween party</a>
+                                        </h5>
+                                        <p class="duration">2hrs 50 min</p>
+                                        <div class="movie-tags">
+                                            <a href="#0">action</a>
+                                            <a href="#0">adventure</a>
+                                            <a href="#0">fantasy</a>
+                                        </div>
+                                        <div class="release">
+                                            <span>Release Date : </span> <a href="#0"> November 8 , 2020</a>
+                                        </div>
+                                        <ul class="movie-rating-percent">
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/cake.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                        </ul>
+                                        <div class="book-area">
+                                            <div class="book-ticket">
+                                                <div class="react-item">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/heart.png" alt="icons">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item mr-auto">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/book.png" alt="icons">
+                                                        </div>
+                                                        <span>book ticket</span>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item">
+                                                    <a href="#0" class="popup-video">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/play-button.png"
+                                                                alt="icons">
+                                                        </div>
+                                                        <span>watch trailer</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="movie-list">
+                                    <div class="movie-thumb c-thumb">
+                                        <a href="movie-details.html" class="w-100 bg_img h-100"
+                                            data-background="./assets/images/movie/movie12.jpg">
+                                            <img class="d-sm-none" src="./assets/images/movie/movie12.jpg" alt="movie">
+                                        </a>
+                                    </div>
+                                    <div class="movie-content bg-one">
+                                        <h5 class="title">
+                                            <a href="movie-details.html">the most wanted</a>
+                                        </h5>
+                                        <p class="duration">2hrs 50 min</p>
+                                        <div class="movie-tags">
+                                            <a href="#0">action</a>
+                                            <a href="#0">adventure</a>
+                                            <a href="#0">fantasy</a>
+                                        </div>
+                                        <div class="release">
+                                            <span>Release Date : </span> <a href="#0"> November 8 , 2020</a>
+                                        </div>
+                                        <ul class="movie-rating-percent">
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/tomato.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                            <li>
+                                                <div class="thumb">
+                                                    <img src="./assets/images/movie/cake.png" alt="movie">
+                                                </div>
+                                                <span class="content">88%</span>
+                                            </li>
+                                        </ul>
+                                        <div class="book-area">
+                                            <div class="book-ticket">
+                                                <div class="react-item">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/heart.png" alt="icons">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item mr-auto">
+                                                    <a href="#0">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/book.png" alt="icons">
+                                                        </div>
+                                                        <span>book ticket</span>
+                                                    </a>
+                                                </div>
+                                                <div class="react-item">
+                                                    <a href="#0" class="popup-video">
+                                                        <div class="thumb">
+                                                            <img src="./assets/images/icons/play-button.png"
+                                                                alt="icons">
+                                                        </div>
+                                                        <span>watch trailer</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination-area text-center">
+                        <a href="#0"><i class="fas fa-angle-double-left"></i><span>Prev</span></a>
+                        <a href="#0">1</a>
+                        <a href="#0">2</a>
+                        <a href="#0" class="active">3</a>
+                        <a href="#0">4</a>
+                        <a href="#0">5</a>
+                        <a href="#0"><span>Next</span><i class="fas fa-angle-double-right"></i></a>
                     </div>
                 </div>
             </div>

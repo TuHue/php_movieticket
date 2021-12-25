@@ -15,6 +15,7 @@ class MovieController extends Controller
     {
         return view('pages.movie.detail');
     }
+
     public function getStep2()
     {
         return view('pages.movie.ticketplan');

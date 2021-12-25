@@ -13,8 +13,7 @@ class AdminController extends Controller
     }
     public function getMovie()
     {
-        $danh_sach_phim = Phim::select('phim_id', 'ten_phim', 'gioi_han_tuoi', 'thoi_luong', 'ngon_ngu', 'dien_vien', 'quoc_gia')->orderBy('phim_id', 'desc')->paginate(10);
-
+        $danh_sach_phim = Phim::select('ten_phim', 'gioi_han_tuoi', 'thoi_luong', 'ngon_ngu', 'dien_vien', 'quoc_gia', 'phim_id')->paginate(10);
         return view('admin.movie.index', compact('danh_sach_phim'));
     }
 
@@ -26,9 +25,11 @@ class AdminController extends Controller
     {
         return view('admin.movie.update');
     }
-    public function getDelete()
+    public function deleteMovie($id)
     {
-        return view('admin.delete');
+        $phim = Phim::findOrFail($id);
+        $phim->delete();
+        return redirect('/admin/movie');
     }
     public function getLogin()
     {

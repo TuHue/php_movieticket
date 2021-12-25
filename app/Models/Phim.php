@@ -11,6 +11,7 @@ class Phim extends Model
     protected $primaryKey = 'phim_id';
     protected $guarded = [];
     protected $perPage = 5;
+    public $incrementing = false;
 
     public function loaiPhim()
     {

@@ -90,10 +90,7 @@ Route::group(['prefix' => 'admin'], function () {
             Route::post('', [AdminController::class, 'getUpdate']);
         });
 
-        Route::group(['prefix' => 'delete'], function () {
-            Route::get('', [AdminController::class, 'getDelete']);
-            Route::post('', [AdminController::class, 'getDelete']);
-        });
+       Route::get('delete/{id}',[AdminController::class,'deleteMovie']);
     });
    
 });

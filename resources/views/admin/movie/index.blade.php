@@ -1,6 +1,7 @@
 @extends('admin.layout.master')
 @section('title', 'Movie')
 @section('content')
+
 <style>
     svg {
         display: none;
@@ -65,23 +66,23 @@
                         </tr>
                     </tfoot>
                     <tbody>
-                        @foreach ( $danh_sach_phim as $phim )
+                        @foreach ( $danh_sach_phim as $item )
                         <tr>
-                            <td>{{ $phim->ten_phim }}</td>
-                            <td>{{ $phim->thoi_luong }}</td>
-                            <td>{{ $phim->gioi_han_tuoi }}+</td>
-                            <td>{{ $phim->ngon_ngu }}</td>
-                            <td>{{ $phim->dien_vien }}</td>
-                            <td>{{ $phim->quoc_gia }}</td>
+                            <td>{{ $item->ten_phim }}</td>
+                            <td>{{ $item->thoi_luong }}</td>
+                            <td>{{ $item->gioi_han_tuoi }}+</td>
+                            <td>{{ $item->ngon_ngu }}</td>
+                            <td>{{ $item->dien_vien }}</td>
+                            <td>{{ $item->quoc_gia }}</td>
                             <td>
-                                <a class="btn btn-outline-warning" href="/admin/movie/update/{{ $phim->phim_id }}">
+                                <a class="btn btn-outline-warning" href="/admin/movie/update/{{ $item->phim_id }}">
                                     <i class="fas fa-edit"></i>
                                 </a>
                             </td>
                             </td>
                             <td>
-                                <a class="btn btn-outline-danger" href="/admin/movie/delete" data-toggle="modal"
-                                    data-target="#logoutModal">
+                                <a class="btn btn-outline-danger" onclick="getValueIdPhim('{{$item->phim_id}}')"
+                                    data-toggle="modal" data-target="#logoutModal">
                                     <i class="far fa-trash-alt"></i>
                                 </a>
                             </td>
@@ -112,7 +113,7 @@
             <div class="modal-body">Dữ liệu của bộ phim sẽ được xóa khỏi hệ thống</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Hủy</button>
-                <a class="btn btn-danger" href="/admin/movie/delete/{{ $phim->phim_id }}">Xóa</a>
+                <a class="btn btn-danger" id="modaldelete" href="/admin/movie/delete/{{ $item->phim_id }}">Xóa</a>
             </div>
         </div>
     </div>
@@ -120,4 +121,11 @@
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
 </a>
+<script>
+    function getValueIdPhim(id){
+    var a = document.getElementById('modaldelete'); 
+    a.href = "/admin/movie/delete/"+id;
+}
+
+</script>
 @stop

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Phim;
 
 class AdminController extends Controller
 {
@@ -12,12 +13,11 @@ class AdminController extends Controller
     }
     public function getMovie()
     {
-        return view('admin.movie.index');
+        $danh_sach_phim = Phim::select('phim_id', 'ten_phim', 'gioi_han_tuoi', 'thoi_luong', 'ngon_ngu', 'dien_vien', 'quoc_gia')->orderBy('phim_id', 'desc')->paginate(10);
+
+        return view('admin.movie.index', compact('danh_sach_phim'));
     }
-    public function getLogin()
-    {
-        return view('admin.login');
-    }
+
     public function getAdd()
     {
         return view('admin.movie.add');
@@ -29,5 +29,9 @@ class AdminController extends Controller
     public function getDelete()
     {
         return view('admin.delete');
+    }
+    public function getLogin()
+    {
+        return view('admin.login');
     }
 }

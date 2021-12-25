@@ -82,7 +82,7 @@
                             </td>
                             <td>
                                 <a class="btn btn-outline-danger" onclick="getValueIdPhim('{{$item->phim_id}}')"
-                                    data-toggle="modal" data-target="#logoutModal">
+                                    data-toggle="modal" data-target="#deleteModal">
                                     <i class="far fa-trash-alt"></i>
                                 </a>
                             </td>
@@ -100,7 +100,7 @@
     </div>
 
 </div>
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">

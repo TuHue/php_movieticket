@@ -13,7 +13,7 @@
         <div class="p-5">
             <form class="user" action="{{
 
-                ($phim===null) ? '/admin/movie/add':('/admin/movie/update/'.$phim->phim_id) 
+                ($action) ? '/admin/movie/add':('/admin/movie/update/'.$phim->phim_id) 
                 }}" method="post">
                 @csrf
                 <input type="text" class="form-control " name="phim_id" value={{ ($phim===null) ?'':$phim->phim_id }}
@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group">
-                            <input type="text" class="form-control " name="ten_phim" id="tenPhim"
+                            <input required type="text" class="form-control " name="ten_phim" id="tenPhim"
                                 aria-describedby="emailHelp" placeholder="Nhập tên phim..">
                         </div>
                     </div>
@@ -30,14 +30,14 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group">
-                            <input type="text" class="form-control " name="ngon_ngu" id="ngonNgu"
+                            <input required type="text" class="form-control " name="ngon_ngu" id="ngonNgu"
                                 aria-describedby="emailHelp" placeholder="Ngôn ngữ..." value={{ ($phim===null)
                                 ?'':$phim->ngon_ngu }}>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="form-group">
-                            <input type="text" class="form-control " name="quoc_gia" id="quocGia"
+                            <input required type="text" class="form-control " name="quoc_gia" id="quocGia"
                                 aria-describedby="emailHelp" placeholder="Quốc giá...">
                         </div>
                     </div>
@@ -59,21 +59,21 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group">
-                            <input type="text" class="form-control " name="dien_vien" aria-describedby="emailHelp"
-                                placeholder="Diễn viên phim..." id="dienVien">
+                            <input required type="text" class="form-control " name="dien_vien"
+                                aria-describedby="emailHelp" placeholder="Diễn viên phim..." id="dienVien">
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="form-group">
-                            <input type="text" class="form-control " name="nha_san_xuat" aria-describedby="emailHelp"
-                                placeholder="Nhà sản xuất phim..." id="nhaSanXuat">
+                            <input required type="text" class="form-control " name="nha_san_xuat"
+                                aria-describedby="emailHelp" placeholder="Nhà sản xuất phim..." id="nhaSanXuat">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group">
-                            <select class="form-control" placeholder="Quốc gia" name="quoc_gia">
+                            <select class="form-control" placeholder="Trang thai..." name="trang_thai">
                                 @if ($phim->trang_thai == 'Ngừng chiếu')
                                 <option> Ngừng chiếu</option>
                                 <option>Chiếu</option>
@@ -99,6 +99,18 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <input required type="date" class="form-control " name="ngay_cong_chieu" id="ngonNgu"
+                                aria-describedby="emailHelp" placeholder="Ngôn ngữ..." value={{ ($phim===null)
+                                ?'':$phim->ngay_cong_chieu }}>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                     
+                    </div>
+                </div>
+                <div class="row">
 
                     <div class="col-12">
                         <div class="form-group">
@@ -110,7 +122,7 @@
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary btn-user btn-block">
-                    {{ ($phim===null) ?'Thêm':"Cập nhật" }}
+                    {{ ($action) ?'Thêm':"Cập nhật" }}
                 </button>
             </form>
         </div>

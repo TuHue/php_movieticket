@@ -14,9 +14,20 @@ class AdminController extends Controller
     {
         return view('admin.movie.index');
     }
-
     public function getLogin()
     {
         return view('admin.login');
+    }
+    public function getAdd()
+    {
+        return view('admin.movie.add');
+    }
+    public function getUpdate()
+    {
+        return view('admin.movie.update');
+    }
+    public function getDelete()
+    {
+        return view('admin.delete');
     }
 }

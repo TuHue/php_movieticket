@@ -62,6 +62,21 @@ Route::group(['prefix' => 'admin'], function () {
     Route::group(['prefix' => 'movie'], function () {
         Route::get('', [AdminController::class, 'getMovie']);
         Route::post('', [AdminController::class, 'getMovie']);
+
+        Route::group(['prefix' => 'add'], function () {
+            Route::get('', [AdminController::class, 'getAdd']);
+            Route::post('', [AdminController::class, 'getAdd']);
+        });
+
+        Route::group(['prefix' => 'update'], function () {
+            Route::get('', [AdminController::class, 'getUpdate']);
+            Route::post('', [AdminController::class, 'getUpdate']);
+        });
+
+        Route::group(['prefix' => 'delete'], function () {
+            Route::get('', [AdminController::class, 'getDelete']);
+            Route::post('', [AdminController::class, 'getDelete']);
+        });
     });
    
 });

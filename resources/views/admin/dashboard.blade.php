@@ -99,7 +99,6 @@
     </div>
 
     <!-- Content Row -->
-
     <div class="row">
 
         <!-- Area Chart -->
@@ -324,9 +323,6 @@
 
         </div>
     </div>
-
-
-
 
 </div>
 @stop

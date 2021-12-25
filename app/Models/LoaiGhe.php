@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class LoaiGhe extends Model
 {
-    use HasFactory;
+    protected $table = 'loai_ghe';
+    protected $primaryKey = 'loai_ghe_id';
+    protected $guarded = [];
+    protected $perPage = 5;
 }

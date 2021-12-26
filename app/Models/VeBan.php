@@ -11,6 +11,8 @@ class VeBan extends Model
     protected $primaryKey = 've_ban_id';
     protected $guarded = [];
     protected $perPage = 5;
+    public $timestamps = false;
+
 
     public function gheNgoi()
     {

@@ -63,6 +63,7 @@
                             <th>Quốc gia</th>
                             <th></th>
                             <th></th>
+                            <th></th>
                         </tr>
                     </tfoot>
                     <tbody>
@@ -84,6 +85,11 @@
                                 <a class="btn btn-outline-danger" onclick="getValueIdPhim('{{$item->phim_id}}')"
                                     data-toggle="modal" data-target="#deleteModal">
                                     <i class="far fa-trash-alt"></i>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="btn btn-outline-primary" href="/admin/movie/detail/{{ $item->phim_id }}">
+                                    <i class="far fa-eye"></i>
                                 </a>
                             </td>
 

@@ -17,6 +17,13 @@ class AdminController extends Controller
         $danh_sach_phim = Phim::select('ten_phim', 'gioi_han_tuoi', 'thoi_luong', 'ngon_ngu', 'dien_vien', 'quoc_gia', 'phim_id')->paginate(10);
         return view('admin.movie.index', compact('danh_sach_phim'));
     }
+    public function getMovieDetail($id)
+    {
+        $phim = Phim::findOrFail($id);
+        $loai_phim = LoaiPhim::findOrFail($phim->id_loai_phim);
+        $ten_loai_phim = $loai_phim->ten_loai_phim;
+        return view('admin.movie.detail', compact('phim','ten_loai_phim'));
+    }
 
     public function getAdd()
     {
@@ -27,7 +34,8 @@ class AdminController extends Controller
         return view('admin.movie.add', compact('phim', 'ten_loai_phim', 'danh_sach_loai_phim', 'action'));
     }
 
-    public function generateRandomString($length = 25) {
+    public function generateRandomString($length = 25)
+    {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charactersLength = strlen($characters);
         $randomString = '';
@@ -60,8 +68,8 @@ class AdminController extends Controller
         $phim->nha_san_xuat = $nhaSanXuat;
         $phim->id_loai_phim = $idLoaiPhim;
         $phim->tom_tat = $tomTat;
-        $phim->ngay_cong_chieu= $request->ngay_cong_chieu;
-        $phim->trang_thai= $request->trang_thai;
+        $phim->ngay_cong_chieu = $request->ngay_cong_chieu;
+        $phim->trang_thai = $request->trang_thai;
         $phim->save();
         return redirect('/admin/movie');
     }
@@ -74,20 +82,9 @@ class AdminController extends Controller
         $ten_loai_phim = $loai_phim->ten_loai_phim;
         $action = false;
 
-        return view('admin.movie.add', compact('phim', 'ten_loai_phim', 'danh_sach_loai_phim','action'));
+        return view('admin.movie.add', compact('phim', 'ten_loai_phim', 'danh_sach_loai_phim', 'action'));
     }
 
-    public function getDetail()
-    {
-        // $phim = Phim::findOrFail($id);
-        // $danh_sach_loai_phim = LoaiPhim::select()->get();
-        // $loai_phim = LoaiPhim::findOrFail($phim->id_loai_phim);
-        // $ten_loai_phim = $loai_phim->ten_loai_phim;
-        // $action = false;
-
-        // return view('admin.movie.detail', compact('phim', 'ten_loai_phim', 'danh_sach_loai_phim','action'));
-        return view('admin.movie.detail');
-    }
 
     public function postUpdate(Request $request, $id)
     {
@@ -112,8 +109,8 @@ class AdminController extends Controller
         $phim->nha_san_xuat = $nhaSanXuat;
         $phim->id_loai_phim = $idLoaiPhim;
         $phim->tom_tat = $tomTat;
-        $phim->trang_thai= $request->trang_thai;
-        $phim->ngay_cong_chieu= $request->ngay_cong_chieu;
+        $phim->trang_thai = $request->trang_thai;
+        $phim->ngay_cong_chieu = $request->ngay_cong_chieu;
         $phim->save();
         return redirect('/admin/movie');
     }
@@ -127,6 +124,4 @@ class AdminController extends Controller
     {
         return view('admin.login');
     }
-
-  
 }

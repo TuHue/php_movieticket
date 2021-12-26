@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Phim;
 use App\Models\LoaiPhim;
 use App\Models\NguoiDung;
-
+use App\Http\Controllers\besename;
 
 class AdminController extends Controller
 {
@@ -79,6 +79,10 @@ class AdminController extends Controller
             $idLoaiPhim = $request->id_loai_phim;
             $tomTat = $request->tom_tat;
             $thoiLuong = $request->thoi_luong;
+            $target = "images/phim/".($_FILES['img_file']['name']);
+            $nameHinhAnh = $_FILES['img_file']['name'];
+
+            move_uploaded_file($_FILES['img_file']['tmp_name'], $target);
 
             $phim = new Phim();
             $phim->phim_id = $this->generateRandomString(7);
@@ -93,6 +97,7 @@ class AdminController extends Controller
             $phim->tom_tat = $tomTat;
             $phim->ngay_cong_chieu = $request->ngay_cong_chieu;
             $phim->trang_thai = $request->trang_thai;
+            $phim->hinh_anh = $nameHinhAnh;
             $phim->save();
             return redirect('/admin/movie');
         } else {

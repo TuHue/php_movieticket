@@ -12,9 +12,8 @@
         </div>
         <div class="p-5">
             <form class="user" action="{{
-
                 ($action) ? '/admin/movie/add':('/admin/movie/update/'.$phim->phim_id) 
-                }}" method="post">
+                }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <input type="text" class="form-control " name="phim_id" value={{ ($phim===null) ?'':$phim->phim_id }}
                 placeholder="" hidden="true">
@@ -107,7 +106,8 @@
                         </div>
                     </div>
                     <div class="col-6">
-                     
+                        <input type="hidden" name="size" value="100000">
+                        <input type="file" name="img_file" id="img_file" />
                     </div>
                 </div>
                 <div class="row">
@@ -137,6 +137,7 @@
     document.getElementById('quocGia').value = '{{ $phim->quoc_gia }}';
     document.getElementById('dienVien').value = '{{ $phim->dien_vien }}';
     document.getElementById('nhaSanXuat').value = '{{ $phim->nha_san_xuat }}';
+    document.getElementById('img_file').value = '{{ $phim->hinh_anh }}';
     document.getElementById('theLoai').value = '{{ $ten_loai_phim}}';
 </script>
 @stop

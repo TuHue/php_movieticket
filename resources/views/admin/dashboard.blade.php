@@ -1,24 +1,24 @@
 @extends('admin.layout.master')
 @section('title', 'Dashboard')
 @section('content')
-
-
     <div class="container-fluid">
 
         <!-- Page Heading -->
         <h1 class="h3 mb-2 text-gray-800">DASHBOARD</h1>
         <!-- <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-            For more information about DataTables, please visit the <a target="_blank"
-                href="https://datatables.net">official DataTables documentation</a>.</p> -->
+                For more information about DataTables, please visit the <a target="_blank"
+                    href="https://datatables.net">official DataTables documentation</a>.</p> -->
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
-            <div class="card-header py-3 row">
-                <div class="col-sm-8">
-                    <h6 class="m-0 font-weight-bold text-primary">Danh sách người đặt vé</h6>
-                </div>
-                <div class="col-sm-4">
-                    <input type="search" name="search" placeholder="Tên người đặt..." class="form-control">
+            <div class="card-header py-3">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h6 class="m-0 font-weight-bold text-primary">Danh sách người đặt vé</h6>
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="search" name="search" placeholder="Tên người đặt..." class="form-control">
+                    </div>
                 </div>
             </div>
             <div class="card-body">

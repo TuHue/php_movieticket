@@ -76,6 +76,11 @@ Route::group(['prefix' => 'admin'], function () {
         });
 
        Route::get('delete/{id}',[AdminController::class,'deleteMovie']);
+
+       Route::group(['prefix' => 'detail'], function () {
+        Route::get('', [AdminController::class, 'getDetail']);
+        Route::post('', [AdminController::class, 'getDetail']);
+       });
     });
    
 });

@@ -1,5 +1,5 @@
 @extends('admin.layout.master')
-@section('title', 'Movie')
+@section('title', 'Add Movie')
 @section('content')
 <div class="container-fluid">
 

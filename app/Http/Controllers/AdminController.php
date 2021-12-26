@@ -26,6 +26,7 @@ class AdminController extends Controller
         $action = true;
         return view('admin.movie.add', compact('phim', 'ten_loai_phim', 'danh_sach_loai_phim', 'action'));
     }
+
     public function generateRandomString($length = 25) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charactersLength = strlen($characters);
@@ -74,6 +75,18 @@ class AdminController extends Controller
         $action = false;
 
         return view('admin.movie.add', compact('phim', 'ten_loai_phim', 'danh_sach_loai_phim','action'));
+    }
+
+    public function getDetail()
+    {
+        // $phim = Phim::findOrFail($id);
+        // $danh_sach_loai_phim = LoaiPhim::select()->get();
+        // $loai_phim = LoaiPhim::findOrFail($phim->id_loai_phim);
+        // $ten_loai_phim = $loai_phim->ten_loai_phim;
+        // $action = false;
+
+        // return view('admin.movie.detail', compact('phim', 'ten_loai_phim', 'danh_sach_loai_phim','action'));
+        return view('admin.movie.detail');
     }
 
     public function postUpdate(Request $request, $id)

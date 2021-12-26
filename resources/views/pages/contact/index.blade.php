@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- ==========Banner-Section========== -->
-<section class="main-page-header speaker-banner bg_img" data-background="./assets/images/banner/banner07.jpg">
+<section class="main-page-header speaker-banner bg_img" data-background="{{ URL::asset('assets/images/banner/banner07.jpg') }}">
     <div class="container">
         <div class="speaker-banner-content">
             <h2 class="title">contact us</h2>
@@ -25,7 +25,7 @@
 <!-- ==========Contact-Section========== -->
 <section class="contact-section padding-top">
     <div class="contact-container">
-        <div class="bg-thumb bg_img" data-background="./assets/images/contact/contact.jpg"></div>
+        <div class="bg-thumb bg_img" data-background="{{ URL::asset('assets/images/contact/contact.jpg') }}"></div>
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-md-7 col-lg-6 col-xl-5">
@@ -62,7 +62,7 @@
                         <div class="info-area">
                             <div class="info-item">
                                 <div class="info-thumb">
-                                    <img src="./assets/images/contact/contact01.png" alt="contact">
+                                    <img src="{{ URL::asset('assets/images/contact/contact01.png') }}" alt="contact">
                                 </div>
                                 <div class="info-content">
                                     <h6 class="title">phone number</h6>
@@ -71,7 +71,7 @@
                             </div>
                             <div class="info-item">
                                 <div class="info-thumb">
-                                    <img src="./assets/images/contact/contact02.png" alt="contact">
+                                    <img src="{{ URL::asset('assets/images/contact/contact02.png') }}" alt="contact">
                                 </div>
                                 <div class="info-content">
                                     <h6 class="title">Email</h6>

@@ -8,7 +8,7 @@
         <h6 class="subtitle">Welcome! </h6>
         <h4 class="title">Select Your Seats</h4>
         <div class="thumb">
-            <img src="./assets/images/movie/seat-plan.png" alt="movie">
+            <img src="{{URL::asset('assets/images/movie/seat-plan.png')}}" alt="movie">
         </div>
         <a href="movie-seat-plan.html" class="custom-button seatPlanButton">Seat Plans<i
                 class="fas fa-angle-right"></i></a>
@@ -17,7 +17,7 @@
 <!-- ==========Window-Warning-Section========== -->
 
 <!-- ==========Banner-Section========== -->
-<section class="details-banner hero-area bg_img" data-background="./assets/images/banner/banner03.jpg">
+<section class="details-banner hero-area bg_img" data-background="{{URL::asset('assets/images/banner/banner03.jpg')}}">
     <div class="container">
         <div class="details-banner-wrapper">
             <div class="details-banner-content">
@@ -40,7 +40,7 @@
         <form class="ticket-search-form two">
             <div class="form-group">
                 <div class="thumb">
-                    <img src="./assets/images/ticket/city.png" alt="ticket">
+                    <img src="{{URL::asset('assets/images/ticket/city.png')}}" alt="ticket">
                 </div>
                 <span class="type">city</span>
                 <select class="select-bar">
@@ -55,7 +55,7 @@
             </div>
             <div class="form-group">
                 <div class="thumb">
-                    <img src="./assets/images/ticket/date.png" alt="ticket">
+                    <img src="{{URL::asset('assets/images/ticket/date.png')}}" alt="ticket">
                 </div>
                 <span class="type">date</span>
                 <select class="select-bar">
@@ -67,7 +67,7 @@
             </div>
             <div class="form-group">
                 <div class="thumb">
-                    <img src="./assets/images/ticket/cinema.png" alt="ticket">
+                    <img src="{{URL::asset('assets/images/ticket/cinema.png')}}" alt="ticket">
                 </div>
                 <span class="type">cinema</span>
                 <select class="select-bar">
@@ -82,7 +82,7 @@
             </div>
             <div class="form-group">
                 <div class="thumb">
-                    <img src="./assets/images/ticket/exp.png" alt="ticket">
+                    <img src="{{URL::asset('assets/images/ticket/exp.png')}}" alt="ticket">
                 </div>
                 <span class="type">Experience</span>
                 <select class="select-bar">
@@ -267,7 +267,7 @@
                 <div class="widget-1 widget-banner">
                     <div class="widget-1-body">
                         <a href="#0">
-                            <img src="./assets/images/sidebar/banner/banner03.jpg" alt="banner">
+                            <img src="{{URL::asset('assets/images/sidebar/banner/banner03.jpg')}}" alt="banner">
                         </a>
                     </div>
                 </div>

@@ -78,38 +78,38 @@
                                 <li class="front-seat">
                                     <ul>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="front-seat">
                                     <ul>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                     </ul>
                                 </li>
@@ -122,59 +122,59 @@
                                 <li class="front-seat">
                                     <ul>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="front-seat">
                                     <ul>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat seat-free">
-                                            <img src="./assets/images/movie/seat01-free.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01-free.png')}}" alt="seat">
                                             <span class="sit-num">f7</span>
                                         </li>
                                         <li class="single-seat seat-free">
-                                            <img src="./assets/images/movie/seat01-free.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01-free.png')}}" alt="seat">
                                             <span class="sit-num">f8</span>
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="front-seat">
                                     <ul>
                                         <li class="single-seat seat-free">
-                                            <img src="./assets/images/movie/seat01-free.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01-free.png')}}" alt="seat">
                                             <span class="sit-num">f9</span>
                                         </li>
                                         <li class="single-seat seat-free">
-                                            <img src="./assets/images/movie/seat01-free.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01-free.png')}}" alt="seat">
                                             <span class="sit-num">f10</span>
                                         </li>
                                         <li class="single-seat seat-free">
-                                            <img src="./assets/images/movie/seat01-free.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01-free.png')}}" alt="seat">
                                             <span class="sit-num">f11</span>
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat01.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat01.png')}}" alt="seat">
                                         </li>
                                     </ul>
                                 </li>
@@ -192,33 +192,33 @@
                                 <li class="front-seat">
                                     <ul>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="front-seat">
-                                    <ul>
-                                        <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
-                                        </li>
-                                        <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
-                                        </li>
-                                        <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="front-seat">
                                     <ul>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
+                                        </li>
+                                        <li class="single-seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="front-seat">
+                                    <ul>
+                                        <li class="single-seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
+                                        </li>
+                                        <li class="single-seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
                                         </li>
                                     </ul>
                                 </li>
@@ -231,34 +231,34 @@
                                 <li class="front-seat">
                                     <ul>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="front-seat">
                                     <ul>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat seat-free-two">
-                                            <img src="./assets/images/movie/seat02-booked.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02-booked.png')}}" alt="seat">
                                             <span class="sit-num">D7 D8</span>
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="front-seat">
                                     <ul>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
                                         </li>
                                     </ul>
                                 </li>
@@ -271,34 +271,34 @@
                                 <li class="front-seat">
                                     <ul>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="front-seat">
                                     <ul>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="front-seat">
                                     <ul>
                                         <li class="single-seat seat-free-two">
-                                            <img src="./assets/images/movie/seat02-free.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02-free.png')}}" alt="seat">
                                             <span class="sit-num">f11 f12</span>
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
                                         </li>
                                     </ul>
                                 </li>
@@ -311,34 +311,34 @@
                                 <li class="front-seat">
                                     <ul>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="front-seat">
                                     <ul>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat seat-free-two">
-                                            <img src="./assets/images/movie/seat02-free.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02-free.png')}}" alt="seat">
                                             <span class="sit-num">b7 b8</span>
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="front-seat">
                                     <ul>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
                                         </li>
                                         <li class="single-seat">
-                                            <img src="./assets/images/movie/seat02.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02.png')}}" alt="seat">
                                         </li>
                                     </ul>
                                 </li>
@@ -351,11 +351,11 @@
                                 <li class="front-seat">
                                     <ul>
                                         <li class="single-seat seat-free-two">
-                                            <img src="./assets/images/movie/seat02-free.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02-free.png')}}" alt="seat">
                                             <span class="sit-num">a1 a2</span>
                                         </li>
                                         <li class="single-seat seat-free-two">
-                                            <img src="./assets/images/movie/seat02-free.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02-free.png')}}" alt="seat">
                                             <span class="sit-num">a3 a4</span>
                                         </li>
                                     </ul>
@@ -363,15 +363,15 @@
                                 <li class="front-seat">
                                     <ul>
                                         <li class="single-seat seat-free-two">
-                                            <img src="./assets/images/movie/seat02-free.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02-free.png')}}" alt="seat">
                                             <span class="sit-num">a5 a6</span>
                                         </li>
                                         <li class="single-seat seat-free-two">
-                                            <img src="./assets/images/movie/seat02-free.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02-free.png')}}" alt="seat">
                                             <span class="sit-num">a7 a8</span>
                                         </li>
                                         <li class="single-seat seat-free-two">
-                                            <img src="./assets/images/movie/seat02-free.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02-free.png')}}" alt="seat">
                                             <span class="sit-num">a9 a10</span>
                                         </li>
                                     </ul>
@@ -379,11 +379,11 @@
                                 <li class="front-seat">
                                     <ul>
                                         <li class="single-seat seat-free-two">
-                                            <img src="./assets/images/movie/seat02-free.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02-free.png')}}" alt="seat">
                                             <span class="sit-num">a11</span>
                                         </li>
                                         <li class="single-seat seat-free-two">
-                                            <img src="./assets/images/movie/seat02-free.png" alt="seat">
+                                            <img src="{{URL::asset('assets/images/movie/seat02-free.png')}}" alt="seat">
                                             <span class="sit-num">a12</span>
                                         </li>
                                     </ul>
@@ -394,7 +394,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="proceed-book bg_img" data-background="./assets/images/movie/movie-bg-proceed.jpg">
+            <div class="proceed-book bg_img" data-background="{{URL::asset('assets/images/movie/movie-bg-proceed.jpg')}}">
                 <div class="proceed-to-book">
                     <div class="book-item">
                         <span>You have Choosed Seat</span>

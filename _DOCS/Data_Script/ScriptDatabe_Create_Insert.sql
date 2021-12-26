@@ -135,7 +135,7 @@ VALUES
         1,
         'Nguyễn Văn A',
         'nguyenvana@gmail.com',
-        '$2a$12$ye16r9Mr4NlGDgmMwTp71.M0/BB6qvH.pwpiMSMigTG.CVaU711fy',
+        '10b8e822d03fb4fd946188e852a4c3e2',
         '022110456',
         'Hà Nội',
         1
@@ -156,7 +156,7 @@ VALUES
         2,
         'admin',
         'admin@gmail.com',
-        '$2a$12$ye16r9Mr4NlGDgmMwTp71.M0/BB6qvH.pwpiMSMigTG.CVaU711fy',
+        '10b8e822d03fb4fd946188e852a4c3e2',
         '022110456',
         'Hà Nội',
         2

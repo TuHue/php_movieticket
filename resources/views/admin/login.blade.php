@@ -18,14 +18,24 @@
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                 </div>
-                                <form class="user">
+                                <form class="user" action="/admin/login" method="post">
+                                    @csrf
+                                    @if (isset($loi))
                                     <div class="form-group">
-                                        <input type="email" class="form-control "
-                                            id="exampleInputEmail" aria-describedby="emailHelp"
-                                            placeholder="Enter Email Address...">
+                                        <span style="color:red">
+                                            {{
+                                            $loi
+                                            }}
+                                        </span>
+                                    </div>
+                                    @endif
+
+                                    <div class="form-group">
+                                        <input type="email" class="form-control " id="exampleInputEmail" name="email"
+                                            aria-describedby="emailHelp" placeholder="Enter Email Address...">
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control "
+                                        <input type="password" class="form-control " name="mat_khau"
                                             id="exampleInputPassword" placeholder="Password">
                                     </div>
                                     <div class="form-group">
@@ -35,9 +45,9 @@
                                                 Me</label>
                                         </div>
                                     </div>
-                                    <a href="index.html" class="btn btn-primary btn-user btn-block">
+                                    <button type="submit" class="btn btn-primary btn-user btn-block">
                                         Login
-                                    </a>
+                                    </button>
                                     <hr>
                                     <a href="index.html" class="btn btn-google btn-user btn-block">
                                         <i class="fab fa-google fa-fw"></i> Login with Google

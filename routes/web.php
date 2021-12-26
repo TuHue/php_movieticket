@@ -29,7 +29,9 @@ Route::group(['prefix' => ''], function () {
         Route::get('', [MemberController::class, 'getRegister']);
         Route::post('', [MemberController::class, 'postRegister']);
     });
-    Route::get('', function () { return redirect(   "/movie"); })->name('');
+    Route::get('', function () {
+        return redirect("/movie");
+    })->name('');
 
     Route::group(['prefix' => 'movie'], function () {
         Route::get('', [MovieController::class, 'index']);
@@ -39,7 +41,7 @@ Route::group(['prefix' => ''], function () {
             Route::get('', [MovieController::class, 'getStep1']);
             Route::post('', [MovieController::class, 'getStep1']);
         });
-        Route::group(['name' => 'step-2','prefix' => 'step-2'], function () {
+        Route::group(['name' => 'step-2', 'prefix' => 'step-2'], function () {
             Route::get('', [MovieController::class, 'getStep2']);
             Route::post('', [MovieController::class, 'getStep2']);
         });
@@ -52,14 +54,13 @@ Route::group(['prefix' => ''], function () {
             Route::post('', [MovieController::class, 'getStep4']);
         });
     });
-
 });
 
 Route::group(['prefix' => 'admin'], function () {
     Route::get('dashboard', [AdminController::class, 'index'])->name('dashboard');
     Route::group(['prefix' => 'login'], function () {
         Route::get('', [AdminController::class, 'getLogin']);
-        Route::post('', [AdminController::class, 'getLogin']);
+        Route::post('', [AdminController::class, 'postLogin']);
     });
     Route::group(['prefix' => 'movie'], function () {
         Route::get('', [AdminController::class, 'getMovie']);
@@ -75,11 +76,7 @@ Route::group(['prefix' => 'admin'], function () {
             Route::post('/{id}', [AdminController::class, 'postUpdate']);
         });
 
-       Route::get('delete/{id}',[AdminController::class,'deleteMovie']);
-       Route::get('detail/{id}',[AdminController::class,'getMovieDetail']);
-
-     
+        Route::get('delete/{id}', [AdminController::class, 'deleteMovie']);
+        Route::get('detail/{id}', [AdminController::class, 'getMovieDetail']);
     });
-   
 });
-

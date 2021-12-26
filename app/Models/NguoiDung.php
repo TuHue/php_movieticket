@@ -11,6 +11,7 @@ class NguoiDung extends Model
     protected $primaryKey = 'nguoi_dung_id';
     protected $guarded = [];
     protected $perPage = 5;
+    public $timestamps = false;
 
     public function veDat()
     {

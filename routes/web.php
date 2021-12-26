@@ -23,11 +23,11 @@ Route::group(['prefix' => ''], function () {
 
     Route::group(['prefix' => 'login'], function () {
         Route::get('', [MemberController::class, 'getLogin']);
-        Route::post('', [MemberController::class, 'getLogin']);
+        Route::post('', [MemberController::class, 'postLogin']);
     });
     Route::group(['prefix' => 'register'], function () {
         Route::get('', [MemberController::class, 'getRegister']);
-        Route::post('', [MemberController::class, 'getRegister']);
+        Route::post('', [MemberController::class, 'postRegister']);
     });
     Route::get('', function () { return redirect(   "/movie"); })->name('');
 

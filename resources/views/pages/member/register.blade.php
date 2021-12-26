@@ -11,18 +11,19 @@
                     <span class="cate">welcome</span>
                     <h2 class="title">to Boleto </h2>
                 </div>
-                <form class="account-form">
+                <form class="account-form"  action="register" method="post">
+                     @csrf
                     <div class="form-group">
                         <label for="email1">Email<span>*</span></label>
-                        <input type="text" placeholder="Enter Your Email" id="email1" required>
+                        <input type="text" placeholder="Enter Your Email" id="email1" name="email1" required>
                     </div>
                     <div class="form-group">
                         <label for="pass1">Password<span>*</span></label>
-                        <input type="password" placeholder="Password" id="pass1" required>
+                        <input type="password" placeholder="Password" id="pass1" name="pass1" required>
                     </div>
                     <div class="form-group">
                         <label for="pass2">Confirm Password<span>*</span></label>
-                        <input type="password" placeholder="Password" id="pass2" required>
+                        <input type="password" placeholder="Password" id="pass2" name="pass2" required>
                     </div>
                     <div class="form-group checkgroup">
                         <input type="checkbox" id="bal" required checked>
@@ -59,4 +60,9 @@
     </div>
 </section>
 <!-- ==========Sign-In-Section========== -->
+
+<script>
+    document.getElementById('email1').value = '{{ $nguoiDung->email1 }}';
+    document.getElementById('pass1').value = '{{ $nguoiDung->pass1 }}';
+</script>
 @stop

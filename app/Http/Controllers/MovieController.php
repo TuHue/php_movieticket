@@ -64,25 +64,24 @@ class MovieController extends Controller
             ->where('id_phong_chieu', '=', $suat_chieu->id_phong_chieu)
             ->get();
         $danh_sach_loc = new ArrayObject([]);
-
         function kienTraGheDaDat($id, $items)
         {
             $flag = false;
             foreach ($items as $item) {
                 if ($item->id_ghe_ngoi  == $id) {
-                    $flag = true;
+                   return $flag = true;
+                    
                 }
             }
             return $flag;
         }
         foreach ($danh_sach_ghe_ngoi as $ghe_ngoi) {
-            if (kienTraGheDaDat($ghe_ngoi->id_ghe_ngoi, $danh_sach_ve_ban)) {
+            if (kienTraGheDaDat($ghe_ngoi->ghe_ngoi_id, $danh_sach_ve_ban)) {
                 $danh_sach_loc->append(['key' => true, 'item' => $ghe_ngoi]);
             } else {
                 $danh_sach_loc->append(['key' => false, 'item' => $ghe_ngoi]);
             }
         }
-
         return view('pages.movie.seatplan', compact('danh_sach_loc', 'id'));
     }
 
@@ -99,7 +98,7 @@ class MovieController extends Controller
         $ve_ban->tong_tien = $request->tong_tien;
         $ve_ban->id_nguoi_dung = $nguoi_dung->nguoi_dung_id;
         $ve_ban->ma_xac_thuc = $request->ma_xac_thuc;
-        $ve_ban->ten_phim=$request->ten_phim;
+        $ve_ban->ten_phim = $request->ten_phim;
         $ve_ban->ten_nguoi_dat = $request->ten_nguoi_dat;
         $ve_ban->save();
         $danh_sach_phim = Phim::select()->paginate(10);

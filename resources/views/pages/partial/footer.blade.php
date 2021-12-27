@@ -1,77 +1,39 @@
-<footer class="footer-section">
-    <div class="newslater-section padding-bottom">
-        <div class="container">
-            <div class="newslater-container bg_img" data-background="./assets/images/newslater/newslater-bg01.jpg">
-                <div class="newslater-wrapper">
-                    <h5 class="cate">subscribe to Boleto </h5>
-                    <h3 class="title">to get exclusive benifits</h3>
-                    <form class="newslater-form">
-                        <input type="text" placeholder="Your Email Address">
-                        <button type="submit">subscribe</button>
-                    </form>
-                    <p>We respect your privacy, so we never share your info</p>
-                </div>
-            </div>
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>about us</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quas magni pariatur est accusantium voluptas enim nemo facilis sit debitis.</p>
         </div>
+        <div class="box">
+            <h3>branch locations</h3>
+            <a href="#">india</a>
+            <a href="#">USA</a>
+            <a href="#">japan</a>
+            <a href="#">france</a>
+        </div>
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">book</a>
+            <a href="#">packages</a>
+            <a href="#">services</a>
+            <a href="#">gallery</a>
+            <a href="#">review</a>
+            <a href="#">contact</a>
+        </div>
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">twitter</a>
+            <a href="#">linkedin</a>
+        </div>
+
     </div>
-    <div class="container">
-        <div class="footer-top">
-            <div class="logo">
-                <a href="index-1.html">
-                    <img src="./assets/images/footer/footer-logo.png" alt="footer">
-                </a>
-            </div>
-            <ul class="social-icons">
-                <li>
-                    <a href="#0">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#0" class="active">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#0">
-                        <i class="fab fa-pinterest-p"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#0">
-                        <i class="fab fa-google"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#0">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="footer-bottom">
-            <div class="footer-bottom-area">
-                <div class="left">
-                    <p>Copyright © 2020.All Rights Reserved By <a href="#0">Boleto </a></p>
-                </div>
-                <ul class="links">
-                    <li>
-                        <a href="#0">About</a>
-                    </li>
-                    <li>
-                        <a href="#0">Terms Of Use</a>
-                    </li>
-                    <li>
-                        <a href="#0">Privacy Policy</a>
-                    </li>
-                    <li>
-                        <a href="#0">FAQ</a>
-                    </li>
-                    <li>
-                        <a href="#0">Feedback</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
+
+    <h1 class="credit"> created by <span> mr. web designer </span> | all rights reserved! </h1>
+
+</section>

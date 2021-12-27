@@ -17,7 +17,7 @@ class MovieController extends Controller
 {
     public function index()
     {
-        $danh_sach_phim = Phim::select()->paginate(10);
+        $danh_sach_phim = Phim::select()->paginate(9);
         return view('pages.movie.index', compact('danh_sach_phim'));
     }
 

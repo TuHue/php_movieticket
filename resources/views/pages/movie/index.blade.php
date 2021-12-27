@@ -21,64 +21,49 @@
         padding: 4px 10px;
         text-decoration: none;
     }
+
     nav span span span {
-        color: red ;
+        color: red;
     }
+
     nav .hidden div p {
         display: none !important;
     }
 </style>
-
-<section class="home" id="home">
-
-    <div class="content">
-        <h3>adventure is worthwhile</h3>
-        <p>dicover new places with us, adventure awaits</p>
-        <a href="#" class="btn">discover more</a>
-    </div>
-
-    <div class="controls">
-        <span class="vid-btn active" data-src="{{ URL::asset('/assets/images/vid-1.mp4') }}"></span>
-        <span class="vid-btn" data-src="{{ URL::asset('/assets/images/vid-2.mp4') }}"></span>
-        <span class="vid-btn" data-src="{{ URL::asset('/assets/images/vid-3.mp4') }}"></span>
-        <span class="vid-btn" data-src="{{ URL::asset('/assets/images/vid-4.mp4') }}"></span>
-        <span class="vid-btn" data-src="{{ URL::asset('/assets/images/vid-5.mp4') }}"></span>
-    </div>
-
-    <div class="video-container">
-        <video src="{{ URL::asset('/assets/images/vid-1.mp4') }}" id="video-slider" loop autoplay muted></video>
-    </div>
-
-</section>
-
-<section class="packages" id="packages">
-
-    <h1 class="heading">
-        <span>m</span>
-        <span>o</span>
-        <span>v</span>
-        <span>i</span>
-        <span>e</span>
-        <span>t</span>
-        <span>i</span>
-        <span>k</span>
-        <span>e</span>
-        <span>t</span>
-    </h1>
-
-    <div class="box-container">
-        @foreach ($danh_sach_phim as $phim )
-        <div class="box" style="width: 18rem;">
-            <img src="{{ URL::asset('images/'.$phim->hinh_anh) }}" alt="">
-            <div class="content">
-                <h3>{{ $phim->ten_phim }} </h3>
-                <p>{{ str_replace(',',' | ',$phim->dien_vien) }}</p>
-                <a href="/movie/step-1/{{ $phim->phim_id }}" class="btn">book now</a>
+<div class="movie__top">
+</div>
+<div class="movie__container">
+    <div class="movie__filters">
+        <div class="filters__category">
+            <div class="title">
+                <h3>Filters</h3>
+            </div>
+            <div class="filters__list">
+                @foreach ($danh_sach_loai_phim as $loai_phim )
+                <a href="/movie/{{ $loai_phim->loai_phim_id }}"><i class="fas fa-arrow-right"></i> {{
+                    $loai_phim->ten_loai_phim }}</a>
+                @endforeach
             </div>
         </div>
-        @endforeach
     </div>
-    {{ $danh_sach_phim->links() }}
-
-</section>
+    <div class="movie__context">
+        <div class="title">
+            <h3>Movie in Cinema</h3>
+        </div>
+        <div class="movie__list">
+            @foreach ($danh_sach_phim as $phim )
+            <div class="movie__item">
+                <img src="{{ URL::asset('images/'.$phim->hinh_anh) }}" alt="">
+                <div class="item__infor">
+                    <h3>{{ $phim->ten_phim }} </h3>
+                    <p>{{ str_replace(',',' | ',$phim->dien_vien) }}</p>
+                    <a href="/movie/step-1/{{ $phim->phim_id }}" class=" btn btn--now">book now</a>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        {{ $danh_sach_phim->links() }}
+    </div>
+</div>
+</div>
 @stop

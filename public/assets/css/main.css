@@ -337,3 +337,63 @@ section {
     padding: 1rem 0;
     line-height: 1.8;
 }
+/* Movie */
+.movie__top{
+  height:20rem;
+  background: url('./img/apps.19703.9007199266246365.73e47f2a-59d9-4ab9-a337-947a9821644b.jpg') no-repeat;
+  background-size: cover;
+}
+.movie__container{
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+}
+.title{
+  font-size:2rem;
+  color: #fff;
+  margin-top: 10px;
+}
+.movie__filters{
+  margin: 0 10px;
+  width: 300px;
+}
+
+.filters__category{
+  background-color: rgb(44, 44, 44);
+  padding:  0 20px;
+  border-radius: 20px;
+  width: 300px;
+}
+.filters__list{
+  display: flex;
+  flex-direction: column ;
+}
+.filters__list a{
+  padding: .5rem;
+  font-size:1.25rem;
+  color: white;
+}
+.movie__context{
+  margin: 0 10px;
+}
+.movie__item{
+  display: flex;
+  width: 100%;
+}
+.movie__item img{
+  width: 200px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.item__infor{
+  margin: auto 20px;
+}
+.item__infor h3{
+  font-size: 1.75rem;
+  color: white;
+}
+.item__infor p{
+  font-size: 1.5rem;
+  color: white;
+}

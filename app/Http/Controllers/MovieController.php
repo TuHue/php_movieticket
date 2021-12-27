@@ -15,10 +15,15 @@ use App\Models\LoaiGhe;
 
 class MovieController extends Controller
 {
-    public function index()
+    public function index($id = null)
     {
-        $danh_sach_phim = Phim::select()->paginate(9);
-        return view('pages.movie.index', compact('danh_sach_phim'));
+        if($id==null){
+            $danh_sach_phim = Phim::select()->paginate();
+        }else{
+            $danh_sach_phim = Phim::select()->where('id_loai_phim', '=', $id)->paginate();
+        }
+        $danh_sach_loai_phim = LoaiPhim::select()->get();
+        return view('pages.movie.index', compact('danh_sach_phim', 'danh_sach_loai_phim'));
     }
 
     public function getStep1($id)
@@ -69,8 +74,7 @@ class MovieController extends Controller
             $flag = false;
             foreach ($items as $item) {
                 if ($item->id_ghe_ngoi  == $id) {
-                   return $flag = true;
-                    
+                    return $flag = true;
                 }
             }
             return $flag;

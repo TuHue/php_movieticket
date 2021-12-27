@@ -5,7 +5,7 @@
         </a>
         <div class="icons">
           <span class="icons__name">Nguyen Văn A</span>
-          <a href="login.html" class="fas fa-sign-in-alt"></a>
-          <a href="register.html" class="fas fa-sign-out-alt"></a>
+          <a href="/login" class="fas fa-sign-in-alt"></a>
+          <a href="/register" class="fas fa-sign-out-alt"></a>
         </div>
       </header>

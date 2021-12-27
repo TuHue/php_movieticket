@@ -1,5 +1,4 @@
 let header = document.querySelector(".header");
-
 window.addEventListener("scroll", function () {
   var x = pageYOffset;
   if (x > 80) {
@@ -7,6 +6,6 @@ window.addEventListener("scroll", function () {
   } else {
     header.classList.remove("header_active");
   }
-
-  console.log(x);
 });
+let detail__banner = document.querySelector("#detail__banner");
+detail__banner.style.background ="url( "+detail__banner.dataset.background+")"; 

@@ -364,6 +364,7 @@ section {
   padding:  0 20px;
   border-radius: 20px;
   width: 300px;
+  box-shadow: 0 0.125rem 0.25rem rgb(216 214 214 / 69%);
 }
 .filters__list{
   display: flex;
@@ -380,11 +381,14 @@ section {
 .movie__item{
   display: flex;
   width: 100%;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background-color: rgb(44, 44, 44);;
+  box-shadow: 0 .125rem .25rem rgba(216, 214, 214, 0.322);
 }
 .movie__item img{
   width: 200px;
-  border-radius: 20px;
-  margin-bottom: 20px;
+  border-radius: 20px 0 0 20px;
 }
 .item__infor{
   margin: auto 20px;
@@ -392,8 +396,19 @@ section {
 .item__infor h3{
   font-size: 1.75rem;
   color: white;
+  margin-bottom: 5px;
 }
 .item__infor p{
   font-size: 1.5rem;
   color: white;
+}
+.item__infor .item_infor--author{
+  color:#ff7800 !important;
+  font-size: 1.25rem;
+}
+/* Detail */
+#detail__banner{
+  height: 30rem;
+  background-size: cover;
+  background-repeat: no-repeat;
 }

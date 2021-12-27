@@ -19,19 +19,18 @@ use App\HTTP\Controllers\AdminController;
 */
 
 Route::group(['prefix' => ''], function () {
-    Route::get('about', [PageController::class, 'about'])->name('about');
-    Route::get('contact', [PageController::class, 'contact'])->name('contact');
-
+    Route::get('home', [PageController::class, 'home'])->name('home');
     Route::group(['prefix' => 'login'], function () {
         Route::get('', [MemberController::class, 'getLogin']);
         Route::post('', [MemberController::class, 'postLogin']);
     });
+
     Route::group(['prefix' => 'register'], function () {
         Route::get('', [MemberController::class, 'getRegister']);
         Route::post('', [MemberController::class, 'postRegister']);
     });
     Route::get('', function () {
-        return redirect("/movie");
+        return redirect("/home");
     })->name('');
 
     Route::group(['prefix' => 'movie'], function () {

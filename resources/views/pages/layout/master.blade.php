@@ -15,7 +15,6 @@
     <!-- ==========Header-Section========== -->
     @include('pages.partial.header')
     <!-- ==========Header-Section========== -->
-    @include('pages.partial.login')
     @yield('content')
 
     <!-- ==========Newslater-Section========== -->

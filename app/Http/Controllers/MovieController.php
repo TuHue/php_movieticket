@@ -98,6 +98,9 @@ class MovieController extends Controller
         $ve_ban->ngay_ban = date('Y-m-d H:i:s');
         $ve_ban->tong_tien = $request->tong_tien;
         $ve_ban->id_nguoi_dung = $nguoi_dung->nguoi_dung_id;
+        $ve_ban->ma_xac_thuc = $request->ma_xac_thuc;
+        $ve_ban->ten_phim=$request->ten_phim;
+        $ve_ban->ten_nguoi_dat = $request->ten_nguoi_dat;
         $ve_ban->save();
         $danh_sach_phim = Phim::select()->paginate(10);
         return view('pages.movie.index', compact('danh_sach_phim'));

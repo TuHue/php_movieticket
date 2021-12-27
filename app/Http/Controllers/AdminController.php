@@ -7,23 +7,46 @@ use Illuminate\Http\Request;
 use App\Models\Phim;
 use App\Models\LoaiPhim;
 use App\Models\NguoiDung;
-use App\Http\Controllers\besename;
+use App\Models\VeBan;
 
 class AdminController extends Controller
 {
     public function index()
     {
         if (session()->get('nguoi_dung')) {
-            return view('admin.dashboard');
+            $danh_sach_ve_ban = VeBan::select()->get();
+
+            return view('admin.dashboard', compact('danh_sach_ve_ban'));
         } else {
             return redirect('admin/login');
         }
     }
+    public  function postTimKiem( Request $request)
+    {
+        if (session()->get('nguoi_dung')) {
+            $danh_sach_ve_ban = VeBan::select()->where('ma_xac_thuc','=',$request->ma_xac_thuc)->get();
+            return view('admin.dashboard', compact('danh_sach_ve_ban'));
+        } else {
+            return redirect('admin/login');
+        }
+    }
+    public function getCheck($id)
+    {
+        if (session()->get('nguoi_dung')) {
+            $ve_ban = VeBan::findOrFail($id);
+            $ve_ban->trang_thai = 1;
+            $ve_ban->save();
+            return redirect('admin/dashboard');
+        } else {
+            return redirect('admin/login');
+        }
+    }
+  
     public function getMovie()
     {
         if (session()->get('nguoi_dung')) {
             $danh_sach_phim = Phim::select('ten_phim', 'gioi_han_tuoi', 'thoi_luong', 'ngon_ngu', 'dien_vien', 'quoc_gia', 'phim_id')
-            ->orderBy('phim_id', 'desc')->paginate(10);
+                ->orderBy('phim_id', 'desc')->paginate(10);
             return view('admin.movie.index', compact('danh_sach_phim'));
         } else {
             return redirect('admin/login');
@@ -79,7 +102,7 @@ class AdminController extends Controller
             $idLoaiPhim = $request->id_loai_phim;
             $tomTat = $request->tom_tat;
             $thoiLuong = $request->thoi_luong;
-            $target = "images/phim/".($_FILES['img_file']['name']);
+            $target = "images/phim/" . ($_FILES['img_file']['name']);
             $nameHinhAnh = $_FILES['img_file']['name'];
 
             move_uploaded_file($_FILES['img_file']['tmp_name'], $target);
@@ -188,7 +211,8 @@ class AdminController extends Controller
             return view('admin.login', compact('loi'));
         }
     }
-    public function getLogout() {
+    public function getLogout()
+    {
         session()->forget('nguoi_dung');
         return redirect('/admin/login');
     }

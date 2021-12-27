@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 use App\HTTP\Controllers\MemberController;
 use App\HTTP\Controllers\PageController;
 use App\HTTP\Controllers\MovieController;
@@ -55,9 +56,13 @@ Route::group(['prefix' => ''], function () {
 });
 
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('dashboard', [AdminController::class, 'index'])->name('dashboard');
     Route::get('logout', [AdminController::class, 'getLogout'])->name('logout');
 
+    Route::group(['prefix' => 'dashboard'], function () {
+        Route::get('', [AdminController::class, 'index']);
+        Route::get('/check/{id}', [AdminController::class, 'getCheck']);
+        Route::post('/search', [AdminController::class, 'postTimKiem']);
+    });
     Route::group(['prefix' => 'login'], function () {
         Route::get('', [AdminController::class, 'getLogin']);
         Route::post('', [AdminController::class, 'postLogin']);
@@ -65,7 +70,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::group(['prefix' => 'movie'], function () {
         Route::get('', [AdminController::class, 'getMovie']);
         Route::post('', [AdminController::class, 'getMovie']);
-        
+
 
         Route::group(['prefix' => 'add'], function () {
             Route::get('', [AdminController::class, 'getAdd']);

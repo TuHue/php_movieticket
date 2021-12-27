@@ -35,6 +35,13 @@ CREATE TABLE IF NOT EXISTS `ve_ban`(
     `ngay_ban` DATETIME NOT NULL,
     `tong_tien` INT(16) UNSIGNED NOT NULL,
     `id_nguoi_dung` INT UNSIGNED NOT NULL,
+        `ma_xac_thuc`VARCHAR(15) NOT NULL,
+      `trang_thai` bit(1) DEFAULT b'0',
+    `ten_phim`VARCHAR(100) NOT NULL,
+    `ten_nguoi_dat`VARCHAR(100) NOT NULL,
+
+
+
 
     PRIMARY KEY (`ve_ban_id`)
 ) ENGINE InnoDB;

@@ -115,6 +115,11 @@
                         <input name="id_ghe_ngoi" id="id_ghe_ngoi" type="hidden" value="" />
                         <input name="id_suat_chieu" id="id_suat_chieu" type="hidden" value="" />
                         <input name="tong_tien" id="tong_tien" type="hidden" value="" />
+                        <input name="ma_xac_thuc" id="ma_xac_thuc" type="hidden" value="" />
+                        <input name="ten_nguoi_dat" id="ten_nguoi_dat" type="hidden" value="" />
+                        <input name="ten_phim" id="ten_phim" type="hidden" value="" />
+                        
+
                         <div class="row">
                             <a href="/movie" class="custom-button back-button col-6">Huy</a>
                             <button type="submit" class="custom-button back-button col-6">Đồng ý</a>
@@ -134,6 +139,10 @@
     document.getElementById('id_ghe_ngoi').value = '{{ $ghe_ngoi->ghe_ngoi_id }}';
     document.getElementById('id_suat_chieu').value = '{{ $suat_chieu->suat_chieu_id }}';
     document.getElementById('tong_tien').value = '{{$gia_ve_xem_phim }}';
+    document.getElementById('ma_xac_thuc').value = '{{$code}}';
+    document.getElementById('ten_nguoi_dat').value = '{{ $nguoi_dung->ten_nguoi_dung }}';
+    document.getElementById('ten_phim').value = '{{$phim->ten_phim }}';
+
 </script>
 <!-- ==========Movie-Section========== -->
 @stop

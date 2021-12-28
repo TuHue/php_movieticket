@@ -47,7 +47,7 @@ class AdminController extends Controller
         if (session()->get('nguoi_dung')) {
             $danh_sach_phim = Phim::select('ten_phim', 'gioi_han_tuoi', 'thoi_luong', 'ngon_ngu', 'dien_vien', 'quoc_gia', 'phim_id')
                 ->orderBy('phim_id', 'desc')->paginate(10);
-            return view('admin.movie.index', compact('danh_sach_phim'));
+            return view('admin.movie.index-css', compact('danh_sach_phim'));
         } else {
             return redirect('admin/login');
         }

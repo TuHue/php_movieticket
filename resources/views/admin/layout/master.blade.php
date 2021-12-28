@@ -186,15 +186,15 @@
                 </svg>
             </button>
         </form>
-        <div class="admin-profile">
+        <a href="/admin/logout" class="admin-profile" style="cursor: pointer">
             <span class="greeting">Admin</span>
-            <div class="notifications">
+            <div class="notifications" >
                 <span class="badge">1</span>
                 <svg>
                     <use xlink:href="#users"></use>
                 </svg>
             </div>
-        </div>
+        </a>
     </section>
     {{-- <section class="grid"> --}}
         @yield('content')

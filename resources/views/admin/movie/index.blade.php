@@ -92,13 +92,9 @@
                                     <i class="far fa-eye"></i>
                                 </a>
                             </td>
-
                         </tr>
                         @endforeach
-
-
                     </tbody>
-
                 </table>
                 {{ $danh_sach_phim->links() }}
             </div>
@@ -132,6 +128,5 @@
     var a = document.getElementById('modaldelete'); 
     a.href = "/admin/movie/delete/"+id;
 }
-
 </script>
 @stop

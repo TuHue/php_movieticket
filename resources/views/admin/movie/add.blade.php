@@ -154,6 +154,27 @@ form .user-details .input-box{
     flex-direction: column;
   }
 }
+.style-select{
+    display: block;
+    width: 100%;
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e);
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 </style>
 <div class="container">
     <div class="title">{{ ($phim === null) ?'THÊM PHIM MỚI':'CHỈNH SỬA PHIM' }}</div>
@@ -196,7 +217,7 @@ form .user-details .input-box{
           </div>
           <div class="input-box">
             <span class="details">Trạng thái</span>
-            <select name="trang_thai">
+            <select name="trang_thai" class="style-select">
                 @if ($phim->trang_thai == 'Ngừng chiếu')
                 <option> Ngừng chiếu</option>
                 <option>Chiếu</option>
@@ -209,7 +230,7 @@ form .user-details .input-box{
           </div>
           <div class="input-box">
             <span class="details">Thể loại</span>
-            <select name="id_loai_phim">
+            <select name="id_loai_phim" class="style-select">
                 @if ($ten_loai_phim !== null)
                 <option value={{ $phim->id_loai_phim }} selected> {{ $ten_loai_phim }}</option>
                 @endif
@@ -231,7 +252,7 @@ form .user-details .input-box{
           </div>
           <div class="input-textarea">
             <span class="details">Tóm tắt nội dung phim</span>
-           <textarea class="form-control" rows="5" cols="80" name="tom_tat"
+           <textarea class="style-select" rows="5" cols="80" name="tom_tat"
            placeholder="Tóm tắt phim...">
            {{ ($phim===null) ?'':$phim->tom_tat }}
                </textarea>

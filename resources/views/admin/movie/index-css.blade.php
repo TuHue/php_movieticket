@@ -207,86 +207,15 @@
         </div>
 
     </div>
-    <dialog aria-labelledby="dialog_title" aria-describedby="dialog_description">
-        <img src="https://native-dialog.surge.sh/location-service.svg" alt="Illustration of Location Services" />
-        <h2 id="dialog_title" class="h2">Bạn có chắc chắn muốn xóa phim này ?</h2>
-        <p id="dialog_description">
-            Dữ liệu của bộ phim sẽ được xóa khỏi hệ thống!
-        </p>
-        <div class="flex flex-space-between">
-            <button id="close_dialog">Hủy</button>
-            <button id="confirm_dialog" class="cta">Xóa</button>
-        </div>
-    </dialog>
     <script src="{{ URL::asset('assets/css/admin/main.js') }}"></script>
     <script>
         function getValueIdPhim(id) {
-            var a = document.getElementById('modaldelete');
-            a.href = "/admin/movie/delete/" + id;
+            debugger;
+            var result = confirm("Bạn có chắc chắn xóa bộ phim này không?");
+           if(result == true) {
+            location.replace('/admin/movie/delete/' + id);
+           }            
         }
     </script>
 
-    <script>
-        import dialogPolyfill from "https://cdn.skypack.dev/dialog-polyfill@0.5.6";
-
-        const dialog = document.querySelector("dialog");
-        const openDialogBtn = document.getElementsByClassName("open_dialog");
-        const closeDialogBtn = document.getElementById("close_dialog");
-
-        const elements = dialog.querySelectorAll(
-            'a, button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])'
-        );
-        const firstElement = elements[0];
-        const lastElement = elements[elements.length - 1];
-
-        const trapFocus = (e) => {
-            if (e.key === "Tab") {
-                const tabForwards = !e.shiftKey && document.activeElement === lastElement;
-                const tabBackwards = e.shiftKey && document.activeElement === firstElement;
-                if (tabForwards) {
-                    // only TAB is pressed, not SHIFT simultaneously
-                    // Prevent default behavior of keydown on TAB (i.e. focus next element)
-                    e.preventDefault();
-                    firstElement.focus();
-                } else if (tabBackwards) {
-                    // TAB and SHIFT are pressed simultaneously
-                    e.preventDefault();
-                    lastElement.focus();
-                }
-            }
-        };
-
-        const openDialog = () => {
-            dialog.showModal();
-            dialog.addEventListener("keydown", trapFocus);
-        };
-
-        const closeDialog = (e) => {
-            e.preventDefault();
-            dialog.close();
-            dialog.removeEventListener("keydown", trapFocus);
-            openDialogBtn.focus();
-        };
-
-        openDialogBtn.addEventListener("click", openDialog);
-        closeDialogBtn.addEventListener("click", closeDialog);
-
-        if (typeof dialog.showModal !== "function") {
-            /**
-             * How to add polyfill outside CodePen conditionally
-             * let polyfill = document.createElement("script");
-             * polyfill.type = "text/javascript";
-             * polyfill.src = "/dist/dialog-polyfill.js";
-             * document.body.append(polyfill);
-            
-             * const polyfillStyles = document.createElement("link");
-             * polyfillStyles.rel = "stylesheet";
-             * polyfillStyles.href = "dialog-polyfill.css";
-             * document.head.append(polyfillStyles);
-             **/
-
-            // Register polyfill on dialog element once the script has loaded
-            dialogPolyfill.registerDialog(dialog);
-        }
-    </script>
 @stop

@@ -23,9 +23,13 @@ class MemberController extends Controller
 
     public function postRegister(Request $request)
     {
-        $username = $request->email1;
-        $password = $request->pass1;
-        $ten_nguoi_dung = "user";
+        if($request->mat_khau != $request->xac_nhan_mat_khau){
+            $loi = "Mật khẩu và xác nhận mật khẩu không khớp";
+            return view('pages.member.register', compact('loi'));
+        }
+        $username = $request->email;
+        $password = $request->mat_khau;
+        $ten_nguoi_dung = $request->email;
         $so_dien_thoai = "";
         $dia_chi = "";
         $vai_tro = 1;
@@ -44,14 +48,26 @@ class MemberController extends Controller
 
     public function postLogin(Request $request)
     {
-        $user = NguoiDung::select()
-            ->where('email', '=', $request->email)
-            ->where('mat_khau', '=', md5($request->pass))
-            ->first();
-        if ($user != null) {
-            session()->put('nguoi_dung_user', $user);
+        $nguoi_dung = NguoiDung::select()
+        ->where('email', '=', $request->email)
+        ->where('mat_khau', '=', md5($request->mat_khau))
+        ->first();
+    if ($nguoi_dung != null) {
+        if ($nguoi_dung->vai_tro == 1) {
+            session()->put('nguoi_dung_client', $nguoi_dung);
             return redirect('/movie');
+        } else {
+            $loi = "Tài khoản của bạn không có quyền truy cập";
+            return view('pages.member.login', compact('loi'));
         }
-        return redirect('/login');
+    } else {
+        $loi = "Tài khoản của bạn không đúng";
+        return view('pages.member.login', compact('loi'));
+    }
+    }
+    public function getLogout()
+    {
+        session()->forget('nguoi_dung_client');
+        return redirect('/movie');
     }
 }

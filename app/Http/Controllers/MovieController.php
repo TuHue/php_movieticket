@@ -49,7 +49,7 @@ class MovieController extends Controller
 
     public function getStep2($id)
     {
-        if (session()->get('nguoi_dung_user') != null) {
+        if (session()->get('nguoi_dung_client') != null) {
             $danh_sach_suat_chieu = SuatChieu::select()->where('id_phim', '=', $id)->get();
             $phim = Phim::findOrFail($id);
 

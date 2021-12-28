@@ -1,68 +1,28 @@
 @extends('pages.layout.master')
 
 @section('title','Register')
-@section('content')
-<!-- ==========Sign-In-Section========== -->
-<section class="account-section bg_img" data-background="./assets/images/account/account-bg.jpg">
-    <div class="container">
-        <div class="padding-top padding-bottom">
-            <div class="account-area">
-                <div class="section-header-3">
-                    <span class="cate">welcome</span>
-                    <h2 class="title">to Boleto </h2>
-                </div>
-                <form class="account-form"  action="register" method="post">
-                     @csrf
-                    <div class="form-group">
-                        <label for="email1">Email<span>*</span></label>
-                        <input type="text" placeholder="Enter Your Email" id="email1" name="email1" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="pass1">Password<span>*</span></label>
-                        <input type="password" placeholder="Password" id="pass1" name="pass1" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="pass2">Confirm Password<span>*</span></label>
-                        <input type="password" placeholder="Password" id="pass2" name="pass2" required>
-                    </div>
-                    <div class="form-group checkgroup">
-                        <input type="checkbox" id="bal" required checked>
-                        <label for="bal">I agree to the <a href="#0">Terms, Privacy Policy</a> and <a
-                                href="#0">Fees</a></label>
-                    </div>
-                    <div class="form-group text-center">
-                        <input type="submit" value="Sign Up">
-                    </div>
-                </form>
-                <div class="option">
-                    Already have an account? <a href="/login">Login</a>
-                </div>
-                <div class="or"><span>Or</span></div>
-                <ul class="social-icons">
-                    <li>
-                        <a href="#0">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#0" class="active">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#0">
-                            <i class="fab fa-google"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ==========Sign-In-Section========== -->
+@section('content')<link rel="stylesheet" href="{{URL::asset('assets/css/login.css')}}">
 
-<script>
-    document.getElementById('email1').value = '{{ $nguoiDung->email1 }}';
-    document.getElementById('pass1').value = '{{ $nguoiDung->pass1 }}';
-</script>
+<div class="login-page">
+    <div class="form">
+       
+        <form class="login-form" action="/register" method="post">
+            @csrf
+            @if (isset($loi))
+            <div style="color:red">
+                {{
+                $loi
+                }}
+            </div>
+            @endif
+            <div class="title">Đăng Ký</div>
+            <input type="text" class="txt" name="email" placeholder="Email..." required />
+            <input type="password" class="txt" name="mat_khau" placeholder="Mật khẩu..." required />
+            <input type="password" class="txt" name="xac_nhan_mat_khau" placeholder="Xác nhận mật khẩu" required />           
+            <button class="btn btn--now" type="submit">Đăng ký</button>
+            <p class="message">Đã có tài khản? <a href="/login">đăng nhập</a></p>
+        </form>
+    </div>
+</div>
+
 @stop

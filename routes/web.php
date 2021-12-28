@@ -20,6 +20,8 @@ use App\HTTP\Controllers\AdminController;
 
 Route::group(['prefix' => ''], function () {
     Route::get('home', [PageController::class, 'home'])->name('home');
+    Route::get('logout', [MemberController::class, 'getLogout'])->name('logout');
+     
     Route::group(['prefix' => 'login'], function () {
         Route::get('', [MemberController::class, 'getLogin']);
         Route::post('', [MemberController::class, 'postLogin']);

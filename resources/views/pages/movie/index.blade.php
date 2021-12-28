@@ -57,8 +57,8 @@
                 <div class="item__infor">
                     <h3>{{ $phim->ten_phim }} </h3>
                     <p class="item_infor--author">{{ str_replace(',',' | ',$phim->dien_vien) }}</p>
-                    <p>{{ $phim->tom_tat }}</p>
-                    <a href="/movie/step-1/{{ $phim->phim_id }}" class=" btn btn--now">book now</a>
+                    <p class="item_infor--description">{{ $phim->tom_tat }}</p>
+                    <a href="/movie/step-1/{{ $phim->phim_id }}" class=" btn btn--now">view</a>
                 </div>
             </div>
             @endforeach

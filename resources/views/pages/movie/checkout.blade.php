@@ -72,7 +72,7 @@
 
 
                         <div class="row">
-                            <a href="/movie" class="btn btn--while">Huy</a>
+                            <a href="/movie" class="btn btn--while">Hủy</a>
                             <button type="submit" class="btn btn--while">Đồng ý</a>
 
                         </div>

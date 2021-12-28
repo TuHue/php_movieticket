@@ -8,7 +8,7 @@
         <div class="screen-thumb">
             <img src="{{URL::to('assets/images/movie/screen-thumb.png')}}" alt="movie">
         </div>
-        <h5 class="subtitle">Ghế thương</h5>
+        <h5 class="subtitle">Ghế thường</h5>
         <div class="screen-wrapper">
             <ul class="seat-area">
                 <li class="seat-line">

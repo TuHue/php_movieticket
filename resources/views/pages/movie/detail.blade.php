@@ -23,13 +23,13 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="col-1">Thời lương:</td>
+                    <td class="col-1">Ngôn ngữ:</td>
                     <td class="col">
-                        <p>{{ str_replace(',',' | ',$phim->dien_vien) }}</p>
+                        <p>{{ str_replace(',',' | ',$phim->ngon_ngu) }}</p>
                     </td>
                 </tr>
                 <tr>
-                    <td class="col-1">Thời lương:</td>
+                    <td class="col-1">Thời lượng:</td>
                     <td class="col">
                         <p>{{ floor($phim->thoi_luong/60).'hrs
                             '.(($phim->thoi_luong%60>0)?($phim->thoi_luong%60).'min':'')}} </p>

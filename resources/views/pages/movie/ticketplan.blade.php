@@ -16,9 +16,9 @@
       <table>
         <thead>
           <tr>
-            <th>Suất Chiếu</th>
+            <th>Suất chiếu</th>
             <th>Giờ bắt đầu</th>
-            <th>Giờ kết thứ</th>
+            <th>Giờ kết thức</th>
             <th>Ngày chiếu</th>
             <th>Giá</th>
             <th></th>

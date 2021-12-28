@@ -1,8 +1,8 @@
 @extends('pages.layout.master')
-@section('title','Seat Plan')
+@section('title','Ghế')
 @section('content')
-<div class="seatphan"></div>
-<div class="ticketplan_top"></div>
+<div class="movie__top">
+</div>
 <div class="seatphan_container">
     <div class="screen-area">
         <div class="screen-thumb">

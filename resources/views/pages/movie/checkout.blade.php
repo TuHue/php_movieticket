@@ -1,7 +1,8 @@
 @extends('pages.layout.master')
 @section('title','Check Out ')
 @section('content')
-<div class="ticketplan_top"></div>
+<div class="movie__top">
+</div>
 <div class="checkout__container">
     <div class="title">
         <h3>Vé : {{ $phim->ten_phim }}</h3>
@@ -15,49 +16,49 @@
         </thead>
         <tbody>
             <tr>
-                <td>Tên phim</td>
-                <td>{{ $phim->ten_phim }}</td>
+                <td class="col">Tên phim</td>
+                <td class="col">{{ $phim->ten_phim }}</td>
             </tr>
             <tr>
-                <td>Loại phim</td>
-                <td>{{ $ten_loai_phim }}</td>
+                <td class="col">Loại phim</td>
+                <td class="col">{{ $ten_loai_phim }}</td>
             </tr>
             <tr>
-                <td>Giá vé</td>
-                <td>{{ number_format($gia_ve_xem_phim, 0, '', ',') }}
+                <td class="col">Giá vé</td>
+                <td class="col">{{ number_format($gia_ve_xem_phim, 0, '', ',') }}
                     <sup>đ</sup></span>
                 </td>
             </tr>
             <tr>
-                <td>Ngày công chiếu</td>
-                <td>{{ Carbon\Carbon::parse($phim->ngay_cong_chieu) }}</td>
+                <td class="col">Ngày công chiếu</td>
+                <td class="col">{{ Carbon\Carbon::parse($phim->ngay_cong_chieu) }}</td>
             </tr>
             <tr>
-                <td>Suất chiếu</td>
-                <td>{{ $suat_chieu->suat_chieu_id }}</td>
+                <td class="col">Suất chiếu</td>
+                <td class="col">Suất chiếu {{ $suat_chieu->suat_chieu_id }}</td>
             </tr>
             <tr>
-                <td>Phòng chiếu</td>
-                <td>{{ $ghe_ngoi->id_phong_chieu }}</td>
+                <td class="col">Phòng chiếu</td>
+                <td class="col">Phòng chiếu {{ $ghe_ngoi->id_phong_chieu }}</td>
             </tr>
             <tr>
-                <td>Ghế</td>
-                <td>{{$ghe_ngoi->vi_tri_day}}{{$ghe_ngoi->vi_tri_cot}}</td>
+                <td class="col">Ghế</td>
+                <td class="col">{{$ghe_ngoi->vi_tri_day}}{{$ghe_ngoi->vi_tri_cot}}</td>
             </tr>
             <tr>
-                <td>Thời lượng</td>
-                <td>{{
+                <td class="col">Thời lượng</td>
+                <td class="col">{{
                     floor($phim->thoi_luong/60).'hrs '.(($phim->thoi_luong%60
                     >0)?($phim->thoi_luong%60).'min':'')
                     }}</td>
             </tr>
             <tr>
-                <td>Mã vé</td>
-                <td>{{ $code }}</td>
+                <td class="col">Mã vé</td>
+                <td class="col">{{ $code }}</td>
             </tr>
             <tr>
-                <td></td>
-                <td>
+                <td class="col"></td>
+                <td class="col">
                     <form method="post" action="/movie/notification">
                         @csrf
                         <input name="id_phim" id="id_phim" type="hidden" value="" />
@@ -71,8 +72,8 @@
 
 
                         <div class="row">
-                            <a href="/movie" class="btn">Huy</a>
-                            <button type="submit" class="btn">Đồng ý</a>
+                            <a href="/movie" class="btn btn--while">Huy</a>
+                            <button type="submit" class="btn btn--while">Đồng ý</a>
 
                         </div>
 

@@ -1,5 +1,5 @@
 @extends('pages.layout.master')
-@section('title','Movie ')
+@section('title','Danh sách phim ')
 @section('content')
 <style>
     svg {
@@ -17,7 +17,7 @@
     }
 
     nav span a {
-        color: black;
+        color: white;
         padding: 4px 10px;
         text-decoration: none;
     }

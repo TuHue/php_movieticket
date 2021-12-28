@@ -1,7 +1,9 @@
 @extends('pages.layout.master')
-@section('title','Ticket Phan ')
+@section('title','Suất chiếu ')
 @section('content')
-<div class="ticketplan_top"></div>
+<div class="movie__top">
+</div>
+
 <div class="ticketplan_container">
   <div class="ticketplan_list">
     <div class="title">
@@ -32,7 +34,7 @@
           
             <td>{{ number_format($suat_chieu->tien_suat_chieu, 0,'', ',') }} <sup>đ</sup></td>
             <td>
-              <a href="/movie/step-3/{{  $suat_chieu->suat_chieu_id }}" class=" btn ">Chọn</a>
+              <a href="/movie/step-3/{{  $suat_chieu->suat_chieu_id }}" class=" btn btn--while">Chọn</a>
             </td>
           </tr>
           @endforeach

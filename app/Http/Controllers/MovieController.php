@@ -91,7 +91,7 @@ class MovieController extends Controller
 
     public function postNotification(Request $request)
     {
-        $nguoi_dung = session()->get('nguoi_dung_user');
+        $nguoi_dung = session()->get('nguoi_dung_client');
 
         $ve_ban = new VeBan();
         $ve_ban->id_phim = $request->id_phim;
@@ -105,12 +105,14 @@ class MovieController extends Controller
         $ve_ban->ten_phim = $request->ten_phim;
         $ve_ban->ten_nguoi_dat = $request->ten_nguoi_dat;
         $ve_ban->save();
+
         $danh_sach_phim = Phim::select()->paginate(10);
-        return view('pages.movie.index', compact('danh_sach_phim'));
+        $danh_sach_loai_phim = LoaiPhim::select()->get();
+        return view('pages.movie.index', compact('danh_sach_phim', 'danh_sach_loai_phim'));
     }
     public function getStep4($id_sc, $id_ng)
     {
-        $nguoi_dung = session()->get('nguoi_dung_user');
+        $nguoi_dung = session()->get('nguoi_dung_client');
         $ghe_ngoi = GheNgoi::findOrFail($id_ng);
         $loai_ghe = LoaiGhe::findOrFail($ghe_ngoi->id_loai_ghe);
         $suat_chieu = SuatChieu::findOrFail($id_sc);
@@ -119,7 +121,6 @@ class MovieController extends Controller
         $ten_loai_phim = $loai_phim->ten_loai_phim;
         $gia_ve_xem_phim = $suat_chieu->tien_suat_chieu + $loai_ghe->phu_phi;
         $code = $this->generateRandomString(9);
-
         return view('pages.movie.checkout', compact('nguoi_dung', 'ghe_ngoi', 'phim', 'ten_loai_phim', 'gia_ve_xem_phim', 'code', 'suat_chieu'));
     }
     public function generateRandomString($length = 25)

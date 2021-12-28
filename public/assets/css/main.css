@@ -75,7 +75,6 @@ section {
 .header_active {
     background: #fff;
     transition: all 0.6s linear;
-
 }
 .header .logo {
     font-size: 2.5rem;
@@ -378,63 +377,99 @@ section {
     font-size: 1.5rem;
     color: var(--orange);
 }
-.detail__infor span{
-  font-weight: bold;
-  color: white  !important;
+.detail__infor span {
+    font-weight: bold;
+    color: white !important;
 }
-.ticketplan_top{
-    height:40vh;
-    background-color:#130f40
+.ticketplan_top {
+    height: 40vh;
+    background-color: #130f40;
 }
-.ticketplan_list{
+.ticketplan_list {
     width: 80%;
     margin: 20px auto;
 }
-.ticketplan_content{
+.ticketplan_content {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 * {
     box-sizing: border-box;
-  }
-  /* The Table Attributes */
-  table {
+}
+/* The Table Attributes */
+table {
     text-align: center;
     width: 100%;
     margin: 20px auto;
     font-family: sans-serif;
     border-bottom: 5px solid #009688;
-  }
-  /* The Attributes that the Head and the Body of the Table Share */
-  th,
-  td {
+}
+/* The Attributes that the Head and the Body of the Table Share */
+th,
+td {
     padding: 10px;
     font-size: 1.5rem;
-  }
-  /* Attributes of the Head of the Body */
-  th {
+}
+/* Attributes of the Head of the Body */
+th {
     background-color: #404040;
     color: white;
-  }
-  /* Attributes of Each Cell */
-  td {
+}
+/* Attributes of Each Cell */
+td {
     background-color: #eee;
-  }
-  /*Attributes of Span*/
-  span {
+}
+/*Attributes of Span*/
+span {
     padding: 5px 10px;
     margin: 3px;
     color: white;
-  }
-  /*Attributes */
-  .blue {
+}
+/*Attributes */
+.blue {
     background-color: #03a9f4;
-  }
-  .pink {
+}
+.pink {
     background-color: #e91e63;
-  }
-  
+}
+.seatphan_container,
+.checkout__container {
+    width: 80%;
+    margin: 20px auto;
+}
+.screen-thumb {
+    text-align: center;
+}
+.screen-thumb img {
+    width: 400px;
+    margin: 30px auto;
+}
+.subtitle {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    margin: 30px;
+}
+.seat-area li {
+    list-style-type: none;
+}
+.seat_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.single-seat {
+    margin: 10px;
+}
+.single-seat {
+    position: relative;
+}
+.sit-num {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 @media (max-width: 1024px) {
     html {

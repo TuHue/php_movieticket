@@ -26,23 +26,14 @@
 
         <div class="box">
             <h3>quick links</h3>
-            <a href="#" class="links">
+            <a href="/home" class="links">
                 <i class="fas fa-arrow-right"></i> home
             </a>
-            <a href="#" class="links">
-                <i class="fas fa-arrow-right"></i> features
+            <a href="/movie" class="links">
+                <i class="fas fa-arrow-right"></i> movie
             </a>
-            <a href="#" class="links">
-                <i class="fas fa-arrow-right"></i> products
-            </a>
-            <a href="#" class="links">
+            <a href="/movie" class="links">
                 <i class="fas fa-arrow-right"></i> categories
-            </a>
-            <a href="#" class="links">
-                <i class="fas fa-arrow-right"></i> review
-            </a>
-            <a href="#" class="links">
-                <i class="fas fa-arrow-right"></i> blogs
             </a>
         </div>
     </div>

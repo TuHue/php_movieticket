@@ -186,7 +186,7 @@
                 </svg>
             </button>
         </form>
-        <a href="" onclick="thongBaoDangXuat()" class="admin-profile" style="cursor: pointer">
+        <a href="#" onclick="thongBaoDangXuat()" class="admin-profile" style="cursor: pointer">
             <span class="greeting">Admin</span>
             <div class="notifications" >
                 <span class="badge">1</span>
@@ -211,6 +211,7 @@
 <script>
 
     function thongBaoDangXuat(){
+        debugger;
         var result = confirm("Bạn có muốn đăng xuất không?");
         if (result == true) {
             location.replace('/admin/logout')

@@ -20,11 +20,22 @@ class MovieController extends Controller
         if($id==null){
             $danh_sach_phim = Phim::select()->paginate();
         }else{
-            $danh_sach_phim = Phim::select()->where('id_loai_phim', '=', $id)->paginate();
+            $danh_sach_phim = Phim::select()->where('id_loai_phim', '=', $id)->orderBy('phim_id')->paginate();
         }
         $danh_sach_loai_phim = LoaiPhim::select()->get();
         return view('pages.movie.index', compact('danh_sach_phim', 'danh_sach_loai_phim'));
     }
+    public  function postTimKiem( Request $request)
+    {
+        // if (session()->get('nguoi_dung')) {
+            $danh_sach_phim = Phim::select()->where('ten_phim','like','%'.$request->tenPhim.'%')->paginate();
+            $danh_sach_loai_phim = LoaiPhim::select()->get();
+            return view('pages.movie.index', compact('danh_sach_phim', 'danh_sach_loai_phim'));
+        // } else {
+        //     return redirect('/login');
+        // }
+    }
+
 
     public function getStep1($id)
     {

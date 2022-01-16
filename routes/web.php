@@ -37,6 +37,7 @@ Route::group(['prefix' => ''], function () {
 
     Route::group(['prefix' => 'movie'], function () {
         Route::get('', [MovieController::class, 'index']);
+        Route::post('/search', [MovieController::class, 'postTimKiem']);
         Route::get('/{id_category}', [MovieController::class, 'index']);
 
         Route::post('', [MovieController::class, 'index']);
